@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function terms() {
   return (
-    <Layout>
+    <Layout title="Terms and Conditions - Data Megathos">
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -12,7 +12,7 @@ export default function terms() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Terms and Conditions</h1>
+                <h2 style={{ color: "#fff" }}>Terms and Conditions</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>

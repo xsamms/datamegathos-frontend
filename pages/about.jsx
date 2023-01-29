@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function about() {
   return (
-    <Layout>
+    <Layout title="About - Data Megathos">
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -13,7 +13,7 @@ export default function about() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>About us</h1>
+                <h2 style={{ color: "#fff" }}>About us</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>

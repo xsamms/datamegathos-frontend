@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function privacy() {
   return (
-    <Layout>
+    <Layout title="Privacy Policy - Data Megathos">
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -12,7 +12,7 @@ export default function privacy() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Privacy Policy</h1>
+                <h2 style={{ color: "#fff" }}>Privacy Policy</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>

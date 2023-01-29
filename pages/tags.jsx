@@ -18,7 +18,7 @@ export default function Tags({ tg, categories, featured, taags }) {
   };
 
   return (
-    <Layout>
+    <Layout title="Blog tags - Data Megathos">
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -27,7 +27,7 @@ export default function Tags({ tg, categories, featured, taags }) {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Tags</h1>
+                <h2 style={{ color: "#fff" }}>Tags</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>

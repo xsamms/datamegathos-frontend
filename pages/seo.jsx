@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function seo() {
   return (
-    <Layout>
+    <Layout title="Search Engine Optimization (SEO) - Data Megathos">
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -13,7 +13,9 @@ export default function seo() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Search Engine Optimization (SEO)</h1>
+                <h2 style={{ color: "#fff" }}>
+                  Search Engine Optimization (SEO)
+                </h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>
@@ -34,9 +36,9 @@ export default function seo() {
                   <h3>SEO made easy</h3>
                 </div>
                 <div className="button">
-                  <a href="#" className="main-btn">
+                  <Link href="#seo" className="main-btn">
                     Get A Quote
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -47,9 +49,13 @@ export default function seo() {
                   <h3>Need Some Help?</h3>
                 </div>
                 <div className="button">
-                  <a href="#" className="main-btn">
+                  <Link
+                    href="https://wa.link/6cd8ei"
+                    className="main-btn"
+                    target="_blank"
+                  >
                     Chat on WhatsApp
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -272,6 +278,7 @@ export default function seo() {
         </div>
       </section>
       <section
+        id="seo"
         className="contact-area pt-110 pb-120 bg_cover"
         style={{ backgroundImage: "url(assets/img/contact-bg.jpg)" }}
       >
@@ -324,7 +331,7 @@ export default function seo() {
                     </div>
                     <div className="col-lg-6">
                       <div className="form_group">
-                        <select>
+                        <select className="form_control">
                           <option value="Search Engine Optimization">
                             Search Engine Optimization
                           </option>

@@ -18,7 +18,7 @@ export default function Category({ cate, categories, featured, tags }) {
   };
 
   return (
-    <Layout>
+    <Layout title="Blog category - Data Megathos">
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -27,7 +27,7 @@ export default function Category({ cate, categories, featured, tags }) {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Category</h1>
+                <h2 style={{ color: "#fff" }}>Category</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>

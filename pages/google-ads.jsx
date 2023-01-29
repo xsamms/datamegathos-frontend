@@ -13,7 +13,7 @@ export default function googleAds() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Google Ads</h1>
+                <h2 style={{ color: "#fff" }}>Google Ads</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>
@@ -34,9 +34,9 @@ export default function googleAds() {
                   <h3>Google Ads Services?</h3>
                 </div>
                 <div className="button">
-                  <a href="#" className="main-btn">
+                  <Link href="#google" className="main-btn">
                     Get A Quote
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -47,9 +47,13 @@ export default function googleAds() {
                   <h3>Reach your ideal customers</h3>
                 </div>
                 <div className="button">
-                  <a href="#" className="main-btn">
+                  <Link
+                    href="https://wa.link/6cd8ei"
+                    className="main-btn"
+                    target="_blank"
+                  >
                     Chat on WhatsApp
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -309,6 +313,7 @@ export default function googleAds() {
         </div>
       </section>
       <section
+        id="google"
         className="contact-area pt-110 pb-120 bg_cover"
         style={{ backgroundImage: "url(assets/img/contact-bg.jpg)" }}
       >

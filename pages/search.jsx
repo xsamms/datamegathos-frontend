@@ -18,7 +18,7 @@ export default function SearchPage({ search, category, featured, tags }) {
   };
 
   return (
-    <Layout>
+    <Layout title={`Search: ${term} - Data Megathos`}>
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -27,7 +27,7 @@ export default function SearchPage({ search, category, featured, tags }) {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Search</h1>
+                <h2 style={{ color: "#fff" }}>Search</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>

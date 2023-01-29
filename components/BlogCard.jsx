@@ -32,9 +32,9 @@ export default function BlogCard({ item }) {
             {item.attributes.title}
           </Link>
         </h3>
-        <a href={"/blog/" + item.attributes.slug} className="btn-icon">
+        <Link href={"/blog/" + item.attributes.slug} className="btn-icon">
           <i className="far fa-long-arrow-right"></i>
-        </a>
+        </Link>
       </div>
     </div>
   );

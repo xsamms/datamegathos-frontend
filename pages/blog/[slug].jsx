@@ -39,10 +39,10 @@ export default function BlogDetail({ blog, category, featured, tags }) {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Blog Details</h1>
+                <h2 style={{ color: "#fff" }}>Blog Details</h2>
                 <ul className="breadcrumb-link">
                   <li>
-                    <a href="#">Home</a>
+                    <Link href="/">Home</Link>
                   </li>
                   <li className="active">Blog</li>
                 </ul>

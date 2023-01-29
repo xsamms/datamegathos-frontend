@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function socialMediaManagement() {
   return (
-    <Layout>
+    <Layout title="Social Media Management - Data Megathos">
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -13,7 +13,7 @@ export default function socialMediaManagement() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Social Media Management</h1>
+                <h2 style={{ color: "#fff" }}>Social Media Management</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>
@@ -34,9 +34,9 @@ export default function socialMediaManagement() {
                   <h3>Social Media Management made easy</h3>
                 </div>
                 <div className="button">
-                  <a href="#" className="main-btn">
+                  <Link href="#smm" className="main-btn">
                     Get A Quote
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -47,9 +47,13 @@ export default function socialMediaManagement() {
                   <h3>Need Some Help?</h3>
                 </div>
                 <div className="button">
-                  <a href="#" className="main-btn">
+                  <Link
+                    href="https://wa.link/6cd8ei"
+                    className="main-btn"
+                    target="_blank"
+                  >
                     Chat on WhatsApp
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -318,6 +322,7 @@ export default function socialMediaManagement() {
         </div>
       </section>
       <section
+        id="smm"
         className="contact-area pt-110 pb-120 bg_cover"
         style={{ backgroundImage: "url(assets/img/contact-bg.jpg)" }}
       >
@@ -370,8 +375,10 @@ export default function socialMediaManagement() {
                     </div>
                     <div className="col-lg-6">
                       <div className="form_group">
-                        <select>
-                          <option value="Website Design">Website Design</option>
+                        <select className="form_control">
+                          <option value="Social Media Management">
+                            Social Media Management
+                          </option>
                         </select>
                       </div>
                     </div>

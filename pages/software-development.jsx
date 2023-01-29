@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function softwareDevelopment() {
   return (
-    <Layout>
+    <Layout title="Software Development - Data Megathos">
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -13,7 +13,7 @@ export default function softwareDevelopment() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Software Development</h1>
+                <h2 style={{ color: "#fff" }}>Software Development</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>
@@ -34,22 +34,26 @@ export default function softwareDevelopment() {
                   <h3>Software Development made easy</h3>
                 </div>
                 <div className="button">
-                  <a href="#" className="main-btn">
+                  <Link href="#software" className="main-btn">
                     Get A Quote
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="col-lg-6 col-md-12 item-bg-two">
               <div className="cta-item item-two d-flex align-items-center">
                 <div className="info">
-                  <span>Stop wasting time</span>
-                  <h3>Need Some Help?</h3>
+                  <span>Software Development</span>
+                  <h3>Need Quality Software?</h3>
                 </div>
                 <div className="button">
-                  <a href="#" className="main-btn">
+                  <Link
+                    href="https://wa.link/6cd8ei"
+                    className="main-btn"
+                    target="_blank"
+                  >
                     Chat on WhatsApp
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -300,6 +304,7 @@ export default function softwareDevelopment() {
         </div>
       </section>
       <section
+        id="software"
         className="contact-area pt-110 pb-120 bg_cover"
         style={{ backgroundImage: "url(assets/img/contact-bg.jpg)" }}
       >
@@ -352,7 +357,7 @@ export default function softwareDevelopment() {
                     </div>
                     <div className="col-lg-6">
                       <div className="form_group">
-                        <select>
+                        <select className="form_control">
                           <option value="Software Development">
                             Software Development
                           </option>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function mobileAppDevelopment() {
   return (
-    <Layout>
+    <Layout title="Mobile App Development - Data Megathos">
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -13,7 +13,7 @@ export default function mobileAppDevelopment() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Mobile App Development</h1>
+                <h2 style={{ color: "#fff" }}>Mobile App Development</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>
@@ -34,9 +34,9 @@ export default function mobileAppDevelopment() {
                   <h3>Mobile App development?</h3>
                 </div>
                 <div className="button">
-                  <a href="#" className="main-btn">
+                  <Link href="#mobile-app" className="main-btn">
                     Get A Quote
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -47,9 +47,13 @@ export default function mobileAppDevelopment() {
                   <h3>Most powerful marketing tool</h3>
                 </div>
                 <div className="button">
-                  <a href="#" className="main-btn">
+                  <Link
+                    href="https://wa.link/6cd8ei"
+                    className="main-btn"
+                    target="_blank"
+                  >
                     Chat on WhatsApp
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -275,6 +279,7 @@ export default function mobileAppDevelopment() {
         </div>
       </section>
       <section
+        id="mobile-app"
         className="contact-area pt-110 pb-120 bg_cover"
         style={{ backgroundImage: "url(assets/img/contact-bg.jpg)" }}
       >

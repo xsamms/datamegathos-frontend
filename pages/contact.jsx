@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function contact() {
   return (
-    <Layout>
+    <Layout title="Contact Us - Data megathos">
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -12,7 +12,7 @@ export default function contact() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Contact Us</h1>
+                <h2 style={{ color: "#fff" }}>Contact Us</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>
@@ -56,23 +56,13 @@ export default function contact() {
                 </div>
                 <div className="info">
                   <p>
-                    <a href="/cdn-cgi/l/email-protection#623b0d17104c2305070c011b22250f030b0e4c210d0f6f68424242424242424242424242424242424242424242424242424242424242424242424242">
-                      <span
-                        className="__cf_email__"
-                        data-cfemail="c891a7bdbae689afada6abb1888fa5a9a1a4e68ba7a5"
-                      >
-                        creative@datamegathos.com
-                      </span>
+                    <a>
+                      <span>creative@datamegathos.com</span>
                     </a>
                   </p>
                   <p>
-                    <a href="/cdn-cgi/l/email-protection#fba2948e89d5ba9c9e959882bbbc969a9297d5b89496f6f1dbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdb">
-                      <span
-                        className="__cf_email__"
-                        data-cfemail="64291d4a370c0b14242c0b1009050d084a270b09"
-                      >
-                        datamegathos@gmail.com
-                      </span>
+                    <a>
+                      <span>datamegathos@gmail.com</span>
                     </a>
                   </p>
                 </div>

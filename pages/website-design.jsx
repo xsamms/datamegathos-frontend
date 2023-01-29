@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function websiteDesign() {
   return (
-    <Layout>
+    <Layout title="Website design and development - Data Megathos">
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -13,7 +13,7 @@ export default function websiteDesign() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>Website Design</h1>
+                <h2 style={{ color: "#fff" }}>Website Design</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>
@@ -34,7 +34,7 @@ export default function websiteDesign() {
                   <h3>Get a website today!</h3>
                 </div>
                 <div className="button">
-                  <Link href="#contact-form" className="main-btn">
+                  <Link href="#website" className="main-btn">
                     Get A Quote
                   </Link>
                 </div>
@@ -262,7 +262,7 @@ export default function websiteDesign() {
         </div>
       </section>
       <section
-        id="contact-form"
+        id="website"
         className="contact-area pt-110 pb-120 bg_cover"
         style={{ backgroundImage: "url(assets/img/contact-bg.jpg)" }}
       >

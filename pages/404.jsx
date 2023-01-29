@@ -12,7 +12,7 @@ export default function notFoundPage() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h1>404 Error</h1>
+                <h2 style={{ color: "#fff" }}>404 Error</h2>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>
