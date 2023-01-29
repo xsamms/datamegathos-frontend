@@ -171,7 +171,11 @@ export default function Footer() {
                       </p>
                       <p>
                         <i className="fa fa-phone"></i>
-                        <a href="tel:+2349157445743" target="_blank">
+                        <a
+                          href="tel:+2349157445743"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           (+234) 915 744 5743
                         </a>
                       </p>
