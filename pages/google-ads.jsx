@@ -79,11 +79,12 @@ export default function googleAds() {
                   </h2>
                 </div>
                 <p>
-                  When you're looking to advertise your products or services
-                  online, it's important to know which platforms are the best
-                  for your target audience. Google Ads is a great choice because
-                  it can help you create brand awareness, target the right
-                  audience, and better ensure that you get real results.
+                  When you&apos;re looking to advertise your products or
+                  services online, it's important to know which platforms are
+                  the best for your target audience. Google Ads is a great
+                  choice because it can help you create brand awareness, target
+                  the right audience, and better ensure that you get real
+                  results.
                 </p>
                 <p>Types of Google Ads we run for our clients:</p>
                 <ul className="about-list-item">
@@ -134,7 +135,7 @@ export default function googleAds() {
                     </div>
                     <div className="list-content">
                       <h5>Google App Ads </h5>
-                      <p>Drive App promotion across Google's network</p>
+                      <p>Drive App promotion across Google&apos;s network</p>
                     </div>
                   </li>
                   <li className="list-item d-flex wow fadeInUp">

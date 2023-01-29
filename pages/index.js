@@ -82,7 +82,12 @@ export default function Home({ posts }) {
             </div>
             <div className="col-lg-6">
               <div className="about-img mb-60  wow fadeInRight">
-                <img src="assets/img/about-v4.jpg" alt="" />
+                <Image
+                  src="/assets/img/about-v4.jpg"
+                  alt=""
+                  width={652}
+                  height={530}
+                />
               </div>
             </div>
           </div>
@@ -104,9 +109,11 @@ export default function Home({ posts }) {
             <div className="col-xl-4 col-lg-6 col-md-6">
               <div className="single-service-item wow fadeInUp">
                 <div className="icon">
-                  <img
-                    src="assets/img/icons/process-3.svg"
+                  <Image
+                    src="/assets/img/icons/process-3.svg"
                     alt="service-icon"
+                    width={60}
+                    height={60}
                   />
                 </div>
                 <div className="service-text">
@@ -118,9 +125,11 @@ export default function Home({ posts }) {
             <div className="col-xl-4 col-lg-6 col-md-6">
               <div className="single-service-item wow fadeInUp">
                 <div className="icon">
-                  <img
-                    src="assets/img/icons/process-1.svg"
+                  <Image
+                    src="/assets/img/icons/process-1.svg"
                     alt="service-icon"
+                    width={60}
+                    height={60}
                   />
                 </div>
                 <div className="service-text">
@@ -132,9 +141,11 @@ export default function Home({ posts }) {
             <div className="col-xl-4 col-lg-6 col-md-6">
               <div className="single-service-item wow fadeInUp">
                 <div className="icon">
-                  <img
-                    src="assets/img/icons/service-2.svg"
+                  <Image
+                    src="//img/icons/service-2.svg"
                     alt="service-icon"
+                    width={60}
+                    height={60}
                   />
                 </div>
                 <div className="service-text">
@@ -146,9 +157,11 @@ export default function Home({ posts }) {
             <div className="col-xl-4 col-lg-6 col-md-6">
               <div className="single-service-item wow fadeInUp">
                 <div className="icon">
-                  <img
-                    src="assets/img/icons/service-1.svg"
+                  <Image
+                    src="/assets/img/icons/service-1.svg"
                     alt="service-icon"
+                    width={60}
+                    height={60}
                   />
                 </div>
                 <div className="service-text">
@@ -160,9 +173,11 @@ export default function Home({ posts }) {
             <div className="col-xl-4 col-lg-6 col-md-6">
               <div className="single-service-item wow fadeInUp">
                 <div className="icon">
-                  <img
-                    src="assets/img/icons/service-6.svg"
+                  <Image
+                    src="/assets/img/icons/service-6.svg"
                     alt="service-icon"
+                    width={60}
+                    height={60}
                   />
                 </div>
                 <div className="service-text">
@@ -174,9 +189,11 @@ export default function Home({ posts }) {
             <div className="col-xl-4 col-lg-6 col-md-6">
               <div className="single-service-item wow fadeInUp">
                 <div className="icon">
-                  <img
-                    src="assets/img/icons/service-5.svg"
+                  <Image
+                    src="/assets/img/icons/service-5.svg"
                     alt="service-icon"
+                    width={60}
+                    height={60}
                   />
                 </div>
                 <div className="service-text">

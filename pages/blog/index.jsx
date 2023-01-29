@@ -7,7 +7,7 @@ import moment from "moment";
 import { API_URI } from "../../config";
 import BlogCard from "../../components/BlogCard";
 
-export default function blog({ posts, category, featured, tags }) {
+export default function Blog({ posts, category, featured, tags }) {
   const [term, setTerm] = useState("");
   const router = useRouter();
 
@@ -143,9 +143,11 @@ export default function blog({ posts, category, featured, tags }) {
                   <ul className="instagram-list">
                     <li>
                       <a href="#">
-                        <img
-                          src="assets/img/insta-post/insta-post-1.jpg"
+                        <Image
+                          src="/assets/img/insta-post/insta-post-1.jpg"
                           alt=""
+                          width={95}
+                          height={85}
                         />
                         <div className="insta-overlay">
                           <i className="fab fa-instagram"></i>
@@ -154,9 +156,11 @@ export default function blog({ posts, category, featured, tags }) {
                     </li>
                     <li>
                       <a href="#">
-                        <img
-                          src="assets/img/insta-post/insta-post-2.jpg"
+                        <Image
+                          src="/assets/img/insta-post/insta-post-2.jpg"
                           alt=""
+                          width={95}
+                          height={85}
                         />
                         <div className="insta-overlay">
                           <i className="fab fa-instagram"></i>
@@ -165,9 +169,11 @@ export default function blog({ posts, category, featured, tags }) {
                     </li>
                     <li>
                       <a href="#">
-                        <img
-                          src="assets/img/insta-post/insta-post-3.jpg"
+                        <Image
+                          src="/assets/img/insta-post/insta-post-3.jpg"
                           alt=""
+                          width={95}
+                          height={85}
                         />
                         <div className="insta-overlay">
                           <i className="fab fa-instagram"></i>
@@ -176,9 +182,11 @@ export default function blog({ posts, category, featured, tags }) {
                     </li>
                     <li>
                       <a href="#">
-                        <img
-                          src="assets/img/insta-post/insta-post-4.jpg"
+                        <Image
+                          src="/assets/img/insta-post/insta-post-4.jpg"
                           alt=""
+                          width={95}
+                          height={85}
                         />
                         <div className="insta-overlay">
                           <i className="fab fa-instagram"></i>
@@ -187,9 +195,11 @@ export default function blog({ posts, category, featured, tags }) {
                     </li>
                     <li>
                       <a href="#">
-                        <img
-                          src="assets/img/insta-post/insta-post-5.jpg"
+                        <Image
+                          src="/assets/img/insta-post/insta-post-5.jpg"
                           alt=""
+                          width={95}
+                          height={85}
                         />
                         <div className="insta-overlay">
                           <i className="fab fa-instagram"></i>
@@ -198,9 +208,11 @@ export default function blog({ posts, category, featured, tags }) {
                     </li>
                     <li>
                       <a href="#">
-                        <img
-                          src="assets/img/insta-post/insta-post-6.jpg"
+                        <Image
+                          src="/assets/img/insta-post/insta-post-6.jpg"
                           alt=""
+                          width={95}
+                          height={85}
                         />
                         <div className="insta-overlay">
                           <i className="fab fa-instagram"></i>
@@ -209,9 +221,11 @@ export default function blog({ posts, category, featured, tags }) {
                     </li>
                     <li>
                       <a href="#">
-                        <img
-                          src="assets/img/insta-post/insta-post-7.jpg"
+                        <Image
+                          src="/assets/img/insta-post/insta-post-7.jpg"
                           alt=""
+                          width={95}
+                          height={85}
                         />
                         <div className="insta-overlay">
                           <i className="fab fa-instagram"></i>
@@ -220,9 +234,11 @@ export default function blog({ posts, category, featured, tags }) {
                     </li>
                     <li>
                       <a href="#">
-                        <img
-                          src="assets/img/insta-post/insta-post-8.jpg"
+                        <Image
+                          src="/assets/img/insta-post/insta-post-8.jpg"
                           alt=""
+                          width={95}
+                          height={85}
                         />
                         <div className="insta-overlay">
                           <i className="fab fa-instagram"></i>
@@ -231,9 +247,11 @@ export default function blog({ posts, category, featured, tags }) {
                     </li>
                     <li>
                       <a href="#">
-                        <img
-                          src="assets/img/insta-post/insta-post-9.jpg"
+                        <Image
+                          src="/assets/img/insta-post/insta-post-9.jpg"
                           alt=""
+                          width={95}
+                          height={85}
                         />
                         <div className="insta-overlay">
                           <i className="fab fa-instagram"></i>

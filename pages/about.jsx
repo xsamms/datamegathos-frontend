@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function about() {
   return (
@@ -140,10 +141,20 @@ export default function about() {
             <div className="col-lg-6">
               <div className="about-img-box mb-50">
                 <div className="shape">
-                  <img src="assets/img/grid.png" alt="shape" />
+                  <Image
+                    src="/assets/img/grid.png"
+                    alt="shape"
+                    width={300}
+                    height={236}
+                  />
                 </div>
                 <div className="about-img">
-                  <img src="assets/img/about-1.jpg" alt="About Image" />
+                  <Image
+                    src="/assets/img/about-1.jpg"
+                    alt="About Image"
+                    width={570}
+                    height={559}
+                  />
                 </div>
                 <div className="experience-box">
                   <div className="content">
@@ -174,7 +185,12 @@ export default function about() {
             <div className="col-lg-4 col-md-6">
               <div className="single-process mb-40 wow fadeInUp" data-num="01">
                 <div className="icon">
-                  <img src="assets/img/icons/process-1.svg" alt="" />
+                  <Image
+                    src="/assets/img/icons/process-1.svg"
+                    alt=""
+                    width={60}
+                    height={60}
+                  />
                 </div>
                 <div className="info">
                   <h5>Collecting Info Data</h5>
@@ -188,7 +204,12 @@ export default function about() {
             <div className="col-lg-4 col-md-6">
               <div className="single-process mb-40 wow fadeInUp" data-num="02">
                 <div className="icon">
-                  <img src="assets/img/icons/process-2.svg" alt="" />
+                  <Image
+                    src="/assets/img/icons/process-2.svg"
+                    alt=""
+                    width={60}
+                    height={60}
+                  />
                 </div>
                 <div className="info">
                   <h5>Setup Work Target</h5>
@@ -202,7 +223,12 @@ export default function about() {
             <div className="col-lg-4 col-md-6">
               <div className="single-process mb-40 wow fadeInUp" data-num="03">
                 <div className="icon">
-                  <img src="assets/img/icons/process-3.svg" alt="" />
+                  <Image
+                    src="/assets/img/icons/process-3.svg"
+                    alt=""
+                    width={60}
+                    height={60}
+                  />
                 </div>
                 <div className="info">
                   <h5>Creative Ideas </h5>
@@ -219,7 +245,12 @@ export default function about() {
             <div className="col-lg-4 col-md-6">
               <div className="single-process mb-40 wow fadeInUp" data-num="04">
                 <div className="icon">
-                  <img src="assets/img/icons/service-4.svg" alt="" />
+                  <Image
+                    src="/assets/img/icons/service-4.svg"
+                    alt=""
+                    width={60}
+                    height={60}
+                  />
                 </div>
                 <div className="info">
                   <h5>Initialize Project</h5>
@@ -233,7 +264,12 @@ export default function about() {
             <div className="col-lg-4 col-md-6">
               <div className="single-process mb-40 wow fadeInUp" data-num="05">
                 <div className="icon">
-                  <img src="assets/img/icons/service-6.svg" alt="" />
+                  <Image
+                    src="/assets/img/icons/service-6.svg"
+                    alt=""
+                    width={60}
+                    height={60}
+                  />
                 </div>
                 <div className="info">
                   <h5>Test Project</h5>
@@ -247,7 +283,12 @@ export default function about() {
             <div className="col-lg-4 col-md-6">
               <div className="single-process mb-40 wow fadeInUp" data-num="06">
                 <div className="icon">
-                  <img src="assets/img/icons/service-1.svg" alt="" />
+                  <Image
+                    src="/assets/img/icons/service-1.svg"
+                    alt=""
+                    width={60}
+                    height={60}
+                  />
                 </div>
                 <div className="info">
                   <h5>Deploy Project </h5>

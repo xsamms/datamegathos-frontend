@@ -84,10 +84,10 @@ export default function socialMediaManagement() {
                   management services, including Instagram marketing, Facebook
                   marketing, Twitter marketing, and LinkedIn marketing. Our team
                   of experts will take care of all of your social media needs so
-                  you can focus on what you do best—your business! We'll save
-                  you time by handling everything from posting to tracking
-                  results. The result? You'll have more time for the things that
-                  matter most: your business and managing it.
+                  you can focus on what you do best—your business! We&apos;ll
+                  save you time by handling everything from posting to tracking
+                  results. The result? You&apos;ll have more time for the things
+                  that matter most: your business and managing it.
                 </p>
                 <p>Social media platform we manage for our clients:</p>
                 <ul className="about-list-item">

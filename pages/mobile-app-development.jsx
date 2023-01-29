@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function mobileAppDevelopment() {
   return (
@@ -60,7 +61,12 @@ export default function mobileAppDevelopment() {
           <div className="row align-items-xl-center">
             <div className="col-lg-6">
               <div className="about-img mb-80 wow fadeInLeft">
-                <img src="assets/img/mobile-app-service.jpg" alt="" />
+                <Image
+                  src="/assets/img/mobile-app-service.jpg"
+                  alt=""
+                  width={625}
+                  height={700}
+                />
               </div>
             </div>
             <div className="col-lg-6">
@@ -70,20 +76,20 @@ export default function mobileAppDevelopment() {
                   <h2>Mobile App is an excellent marketing tool</h2>
                 </div>
                 <p>
-                  With the growing demand for mobile apps, it’s essential to
-                  create an app that will boost your business and improve your
-                  reputation. If you want to make your brand stand out, then you
-                  need a mobile app. It's the best way to reach your customers
-                  and build strong relationships with them.
+                  With the growing demand for mobile apps, it&apos;s essential
+                  to create an app that will boost your business and improve
+                  your reputation. If you want to make your brand stand out,
+                  then you need a mobile app. It's the best way to reach your
+                  customers and build strong relationships with them.
                 </p>
                 <p>
-                  You may be thinking, "I have a website, I have social media
-                  accounts, and I have email lists. What else do I need?" Well,
-                  it might surprise you to know that your mobile app is actually
-                  the most powerful marketing tool you can use. And we're not
-                  just talking about its ability to drive traffic and make your
-                  brand known—we're talking about the fact that your customers
-                  are using these apps all day long!
+                  You may be thinking, &quot;I have a website, I have social
+                  media accounts, and I have email lists. What else do I
+                  need?&quot; Well, it might surprise you to know that your
+                  mobile app is actually the most powerful marketing tool you
+                  can use. And we're not just talking about its ability to drive
+                  traffic and make your brand known—we're talking about the fact
+                  that your customers are using these apps all day long!
                 </p>
                 <ul className="about-list-item">
                   <li className="list-item d-flex wow fadeInUp">
@@ -133,7 +139,12 @@ export default function mobileAppDevelopment() {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="portfolio-img mb-30">
-                    <img src="assets/img/app-speed.jpg" alt="portfolio" />
+                    <Image
+                      src="/assets/img/app-speed.jpg"
+                      alt="portfolio"
+                      width={525}
+                      height={406}
+                    />
                   </div>
                 </div>
                 <div className="col-lg-6">
@@ -162,9 +173,11 @@ export default function mobileAppDevelopment() {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="portfolio-img mb-30">
-                    <img
-                      src="assets/img/outstanding-website.jpg"
+                    <Image
+                      src="/assets/img/outstanding-website.jpg"
                       alt="portfolio"
+                      width={525}
+                      height={406}
                     />
                   </div>
                 </div>
@@ -192,9 +205,11 @@ export default function mobileAppDevelopment() {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="portfolio-img mb-30">
-                    <img
+                    <Image
                       src="assets/img/mobolie-app-sales.jpg"
                       alt="portfolio"
+                      width={525}
+                      height={406}
                     />
                   </div>
                 </div>
@@ -223,9 +238,11 @@ export default function mobileAppDevelopment() {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="portfolio-img mb-30">
-                    <img
-                      src="assets/img/simple-mobile-app.jpg"
+                    <Image
+                      src="/assets/img/simple-mobile-app.jpg"
                       alt="portfolio"
+                      width={525}
+                      height={406}
                     />
                   </div>
                 </div>
