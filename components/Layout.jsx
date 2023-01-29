@@ -20,30 +20,6 @@ export default function Layout({ title, keyword, description, children }) {
         />
         <meta name="msvalidate.01" content="79896EB0E2D3284708D62C3B6C3635AA" />
 
-        <script async src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-
-        <script async src="assets/js/popper.min.js"></script>
-
-        <script async src="assets/js/bootstrap.min.js"></script>
-
-        <script async src="assets/js/slick.min.js"></script>
-
-        <script async src="assets/js/jquery.magnific-popup.min.js"></script>
-
-        <script async src="assets/js/isotope.pkgd.min.js"></script>
-
-        <script async src="assets/js/imagesloaded.pkgd.min.js"></script>
-
-        <script async src="assets/js/jquery.nice-select.min.js"></script>
-
-        <script async src="assets/js/jquery.counterup.min.js"></script>
-
-        <script async src="assets/js/jquery.waypoints.js"></script>
-
-        <script async src="assets/js/wow.min.js"></script>
-
-        <script async src="assets/js/custom.js"></script>
-
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=UA-111472173-1"
