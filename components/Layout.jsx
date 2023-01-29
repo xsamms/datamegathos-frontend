@@ -14,30 +14,45 @@ export default function Layout({ title, keyword, description, children }) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta
+          name="google-site-verification"
+          content="GvwMlTY33UyXTjry5K25aQpLydorjxlLWh2sD17Yfwg"
+        />
+        <meta name="msvalidate.01" content="79896EB0E2D3284708D62C3B6C3635AA" />
 
-        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <script async src="assets/js/vendor/jquery-3.6.0.min.js"></script>
 
-        <script src="assets/js/popper.min.js"></script>
+        <script async src="assets/js/popper.min.js"></script>
 
-        <script src="assets/js/bootstrap.min.js"></script>
+        <script async src="assets/js/bootstrap.min.js"></script>
 
-        <script src="assets/js/slick.min.js"></script>
+        <script async src="assets/js/slick.min.js"></script>
 
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script async src="assets/js/jquery.magnific-popup.min.js"></script>
 
-        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script async src="assets/js/isotope.pkgd.min.js"></script>
 
-        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script async src="assets/js/imagesloaded.pkgd.min.js"></script>
 
-        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script async src="assets/js/jquery.nice-select.min.js"></script>
 
-        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script async src="assets/js/jquery.counterup.min.js"></script>
 
-        <script src="assets/js/jquery.waypoints.js"></script>
+        <script async src="assets/js/jquery.waypoints.js"></script>
 
-        <script src="assets/js/wow.min.js"></script>
+        <script async src="assets/js/wow.min.js"></script>
 
-        <script src="assets/js/custom.js"></script>
+        <script async src="assets/js/custom.js"></script>
+
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-111472173-1"
+        ></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments);}
+          gtag('js', new Date()); gtag('config', 'UA-111472173-1');`}
+        </script>
       </Head>
       <Header />
       {children}
