@@ -79,17 +79,18 @@ export default function mobileAppDevelopment() {
                   With the growing demand for mobile apps, it&apos;s essential
                   to create an app that will boost your business and improve
                   your reputation. If you want to make your brand stand out,
-                  then you need a mobile app. It's the best way to reach your
-                  customers and build strong relationships with them.
+                  then you need a mobile app. It&apos;s the best way to reach
+                  your customers and build strong relationships with them.
                 </p>
                 <p>
                   You may be thinking, &quot;I have a website, I have social
                   media accounts, and I have email lists. What else do I
                   need?&quot; Well, it might surprise you to know that your
                   mobile app is actually the most powerful marketing tool you
-                  can use. And we're not just talking about its ability to drive
-                  traffic and make your brand known—we're talking about the fact
-                  that your customers are using these apps all day long!
+                  can use. And we&apos;re not just talking about its ability to
+                  drive traffic and make your brand known—we&apos;re talking
+                  about the fact that your customers are using these apps all
+                  day long!
                 </p>
                 <ul className="about-list-item">
                   <li className="list-item d-flex wow fadeInUp">
@@ -153,9 +154,9 @@ export default function mobileAppDevelopment() {
                     <p>
                       A mobile app that is slow to load may put-off your
                       prospects. At Data Megathos, we develop mobile apps with
-                      React Native. It's one of the fastest technology used to
-                      develop mobile applications. Not only is React Native
-                      fast, it's also used to develop cross-platform mobile
+                      React Native. It&apos;s one of the fastest technology used
+                      to develop mobile applications. Not only is React Native
+                      fast, it&apos;s also used to develop cross-platform mobile
                       apps, thereby reducing development time.
                     </p>
                     <p>
@@ -206,7 +207,7 @@ export default function mobileAppDevelopment() {
                 <div className="col-lg-6">
                   <div className="portfolio-img mb-30">
                     <Image
-                      src="assets/img/mobolie-app-sales.jpg"
+                      src="/assets/img/mobolie-app-sales.jpg"
                       alt="portfolio"
                       width={525}
                       height={406}

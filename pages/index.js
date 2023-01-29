@@ -98,7 +98,7 @@ export default function Home({ posts }) {
           <div className="row">
             <div className="col-md-12">
               <div className="section-title text-center mb-65 wow fadeInUp">
-                <span className="span">what we're offering</span>
+                <span className="span">what we&apos;re offering</span>
                 <h2>
                   We shape the <br /> perfect solutions
                 </h2>
@@ -142,7 +142,7 @@ export default function Home({ posts }) {
               <div className="single-service-item wow fadeInUp">
                 <div className="icon">
                   <Image
-                    src="//img/icons/service-2.svg"
+                    src="/assets/img/icons/service-2.svg"
                     alt="service-icon"
                     width={60}
                     height={60}
@@ -267,17 +267,26 @@ export default function Home({ posts }) {
                         <a
                           href="http://oshversity.com"
                           target="_blank"
+                          rel="noreferrer"
                           className="icon"
                         >
                           <i className="fal fa-plus"></i>
                         </a>
                         <span className="tag">
-                          <a href="http://oshversity.com" target="_blank">
+                          <a
+                            href="http://oshversity.com"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             OSHversity.com
                           </a>
                         </span>
                         <h5>
-                          <a href="http://oshversity.com" target="_blank">
+                          <a
+                            href="http://oshversity.com"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             Training & Development Company
                           </a>
                         </h5>
@@ -298,17 +307,26 @@ export default function Home({ posts }) {
                         <a
                           href="http://judesblawg.com"
                           target="_blank"
+                          rel="noreferrer"
                           className="icon"
                         >
                           <i className="fal fa-plus"></i>
                         </a>
                         <span className="tag">
-                          <a href="http://judesblawg.com" target="_blank">
+                          <a
+                            href="http://judesblawg.com"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             Judesblawg.com
                           </a>
                         </span>
                         <h5>
-                          <a href="http://judesblawg.com" target="_blank">
+                          <a
+                            href="http://judesblawg.com"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             Law & Political blog
                           </a>
                         </h5>
@@ -330,17 +348,26 @@ export default function Home({ posts }) {
                         <a
                           href="https://www.mogaga.ng/"
                           target="_blank"
+                          rel="noreferrer"
                           className="icon"
                         >
                           <i className="fal fa-plus"></i>
                         </a>
                         <span className="tag">
-                          <a href="https://www.mogaga.ng/" target="_blank">
+                          <a
+                            href="https://www.mogaga.ng/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             Mogaga.ng
                           </a>
                         </span>
                         <h5>
-                          <a href="https://www.mogaga.ng/" target="_blank">
+                          <a
+                            href="https://www.mogaga.ng/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             Mogaga Regalia
                           </a>
                         </h5>
@@ -361,6 +388,7 @@ export default function Home({ posts }) {
                         <a
                           href="http://www.australiaelectrohub.com/"
                           target="_blank"
+                          rel="noreferrer"
                           className="icon"
                         >
                           <i className="fal fa-plus"></i>
@@ -369,6 +397,7 @@ export default function Home({ posts }) {
                           <a
                             href="http://www.australiaelectrohub.com/"
                             target="_blank"
+                            rel="noreferrer"
                           >
                             Australiaelectrohub.com
                           </a>
@@ -377,6 +406,7 @@ export default function Home({ posts }) {
                           <a
                             href="http://www.australiaelectrohub.com/"
                             target="_blank"
+                            rel="noreferrer"
                           >
                             Australian Electronics
                           </a>
@@ -401,6 +431,7 @@ export default function Home({ posts }) {
                         <a
                           href="https://zahariworkspace.com/"
                           target="_blank"
+                          rel="noreferrer"
                           className="icon"
                         >
                           <i className="fal fa-plus"></i>
@@ -409,6 +440,7 @@ export default function Home({ posts }) {
                           <a
                             href="https://zahariworkspace.com/"
                             target="_blank"
+                            rel="noreferrer"
                           >
                             zahariworkspace.com
                           </a>
@@ -417,6 +449,7 @@ export default function Home({ posts }) {
                           <a
                             href="https://zahariworkspace.com/"
                             target="_blank"
+                            rel="noreferrer"
                           >
                             Co-Working Space
                           </a>
@@ -438,17 +471,26 @@ export default function Home({ posts }) {
                         <a
                           href="https://oshafrica.africa/"
                           target="_blank"
+                          rel="noreferrer"
                           className="icon"
                         >
                           <i className="fal fa-plus"></i>
                         </a>
                         <span className="tag">
-                          <a href="https://oshafrica.africa/" target="_blank">
+                          <a
+                            href="https://oshafrica.africa/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             oshafrica.africa
                           </a>
                         </span>
                         <h5>
-                          <a href="https://oshafrica.africa/" target="_blank">
+                          <a
+                            href="https://oshafrica.africa/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             Occupational Safety and Health Africa Foundation
                           </a>
                         </h5>
@@ -470,6 +512,7 @@ export default function Home({ posts }) {
                         <a
                           href="http://www.harroldsproperties.com/"
                           target="_blank"
+                          rel="noreferrer"
                           className="icon"
                         >
                           <i className="fal fa-plus"></i>
@@ -478,6 +521,7 @@ export default function Home({ posts }) {
                           <a
                             href="http://www.harroldsproperties.com/"
                             target="_blank"
+                            rel="noreferrer"
                           >
                             harroldsproperties.com
                           </a>
@@ -486,6 +530,7 @@ export default function Home({ posts }) {
                           <a
                             href="http://www.harroldsproperties.com/"
                             target="_blank"
+                            rel="noreferrer"
                           >
                             Harrolds Properties and Investment Ltd
                           </a>
@@ -507,6 +552,7 @@ export default function Home({ posts }) {
                         <a
                           href="http://www.pistisglobaleducation.com/"
                           target="_blank"
+                          rel="noreferrer"
                           className="icon"
                         >
                           <i className="fal fa-plus"></i>
@@ -515,6 +561,7 @@ export default function Home({ posts }) {
                           <a
                             href="http://www.pistisglobaleducation.com/"
                             target="_blank"
+                            rel="noreferrer"
                           >
                             pistisglobaleduction.com
                           </a>
@@ -523,6 +570,7 @@ export default function Home({ posts }) {
                           <a
                             href="http://www.pistisglobaleducation.com/"
                             target="_blank"
+                            rel="noreferrer"
                           >
                             Pistis Global Educational Services
                           </a>

@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function websiteDesign() {
   return (
@@ -50,6 +51,7 @@ export default function websiteDesign() {
                     href="https://wa.link/6cd8ei"
                     className="main-btn"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Chat on WhatsApp
                   </a>
@@ -64,7 +66,12 @@ export default function websiteDesign() {
           <div className="row align-items-xl-center">
             <div className="col-lg-6">
               <div className="about-img mb-80 wow fadeInLeft">
-                <img src="assets/img/website-design-success.jpg" alt="" />
+                <Image
+                  src="/assets/img/website-design-success.jpg"
+                  alt=""
+                  width={445}
+                  height={578}
+                />
               </div>
             </div>
             <div className="col-lg-6">
@@ -131,9 +138,11 @@ export default function websiteDesign() {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="portfolio-img mb-30">
-                    <img
-                      src="assets/img/responsive-website-design.jpg"
-                      alt="portfolio"
+                    <Image
+                      src="/assets/img/responsive-website-design.jpg"
+                      alt="pResponsive Website Design"
+                      width={525}
+                      height={406}
                     />
                   </div>
                 </div>
@@ -161,9 +170,11 @@ export default function websiteDesign() {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="portfolio-img mb-30">
-                    <img
-                      src="assets/img/beautiful-website.jpg"
-                      alt="portfolio"
+                    <Image
+                      src="/assets/img/beautiful-website.jpg"
+                      alt="Beautiful Website"
+                      width={525}
+                      height={406}
                     />
                   </div>
                 </div>
@@ -190,7 +201,12 @@ export default function websiteDesign() {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="portfolio-img mb-30">
-                    <img src="assets/img/seo-website.jpg" alt="portfolio" />
+                    <Image
+                      src="/assets/img/seo-website.jpg"
+                      alt="SEO Optimized"
+                      width={525}
+                      height={406}
+                    />
                   </div>
                 </div>
                 <div className="col-lg-6">
@@ -216,9 +232,11 @@ export default function websiteDesign() {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="portfolio-img mb-30">
-                    <img
-                      src="assets/img/Web-hosting-provider.jpg"
-                      alt="portfolio"
+                    <Image
+                      src="/assets/img/Web-hosting-provider.jpg"
+                      alt="Web Hosting Provider"
+                      width={525}
+                      height={406}
                     />
                   </div>
                 </div>

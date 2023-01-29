@@ -46,6 +46,7 @@ export default function Footer() {
                         <a
                           href="https://facebook.com/datamegathos"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <i className="fab fa-facebook-f"></i>
                         </a>
@@ -54,6 +55,7 @@ export default function Footer() {
                         <a
                           href="https://twitter.com/datamegathos"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <i className="fab fa-twitter"></i>
                         </a>
@@ -62,6 +64,7 @@ export default function Footer() {
                         <a
                           href="https://www.linkedin.com/company/18507734"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <i className="fab fa-linkedin"></i>
                         </a>
@@ -70,6 +73,7 @@ export default function Footer() {
                         <a
                           href="https://www.instagram.com/datamegathos"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <i className="fab fa-instagram"></i>
                         </a>
@@ -98,16 +102,16 @@ export default function Footer() {
                     <h4 className="widget-title">Links</h4>
                     <ul className="widget-link">
                       <li>
-                        <a href="/about">About Us</a>
+                        <Link href="/about">About Us</Link>
                       </li>
                       <li>
-                        <a href="/contact">Contact Us</a>
+                        <Link href="/contact">Contact Us</Link>
                       </li>
                       <li>
-                        <a href="/privacy">Privacy Policy</a>
+                        <Link href="/privacy">Privacy Policy</Link>
                       </li>
                       <li>
-                        <a href="/terms">Terms and Conditions</a>
+                        <Link href="/terms">Terms and Conditions</Link>
                       </li>
                     </ul>
                   </div>
@@ -161,13 +165,8 @@ export default function Footer() {
                       </p>
                       <p>
                         <i className="fa fa-envelope"></i>
-                        <a href="/cdn-cgi/l/email-protection#51283e24233c30383d7f11363c30383d7f323e3c">
-                          <span
-                            className="__cf_email__"
-                            data-cfemail="d5acbaa0a7b8b4bcb9fb95b2b8b4bcb9fbb6bab8"
-                          >
-                            creative@datamegathos.com
-                          </span>
+                        <a>
+                          <span>creative@datamegathos.com</span>
                         </a>
                       </p>
                       <p>
@@ -184,7 +183,11 @@ export default function Footer() {
                           width="8%"
                           height="8%"
                         />
-                        <a href="https://wa.link/6cd8ei" target="_blank">
+                        <a
+                          href="https://wa.link/6cd8ei"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           (+234) 818 260 0002
                         </a>
                       </p>

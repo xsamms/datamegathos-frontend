@@ -80,8 +80,8 @@ export default function googleAds() {
                 </div>
                 <p>
                   When you&apos;re looking to advertise your products or
-                  services online, it's important to know which platforms are
-                  the best for your target audience. Google Ads is a great
+                  services online, it&apos;s important to know which platforms
+                  are the best for your target audience. Google Ads is a great
                   choice because it can help you create brand awareness, target
                   the right audience, and better ensure that you get real
                   results.
