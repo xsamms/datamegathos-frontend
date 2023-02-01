@@ -57,7 +57,7 @@ export default function BlogDetail({ blog, category, featured, tags }) {
             <div class="col-lg-8">
               <div className="blog-details-wrapper mb-40 wow fadeInUp">
                 <div className="entry-content">
-                  <h3 className="title">{blog.data[0].attributes.title}</h3>
+                  <h1 className="title">{blog.data[0].attributes.title}</h1>
                   <div className="user-info-tag">
                     <div className="tags">
                       <a href="#" className="main-btn">

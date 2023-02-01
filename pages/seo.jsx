@@ -1,8 +1,39 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 import Image from "next/image";
+import { useRef } from "react";
+import { useRouter } from "next/router";
+import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 export default function seo() {
+  const form = useRef();
+
+  const router = useRouter();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_wn76fqg",
+        "template_5w0v6ib",
+        form.current,
+        "vm7EWYoc_fXz6jzMy"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    toast.success("Message sent successfully");
+    router.push({ pathname: "/" });
+  };
+
   return (
     <Layout title="Search Engine Optimization (SEO) - Data Megathos">
       <section
@@ -13,9 +44,7 @@ export default function seo() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h2 style={{ color: "#fff" }}>
-                  Search Engine Optimization (SEO)
-                </h2>
+                <h1>Search Engine Optimization (SEO)</h1>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>
@@ -294,7 +323,7 @@ export default function seo() {
           <div className="row">
             <div className="col-md-12">
               <div className="contact-form wow fadeInUp">
-                <form>
+                <form ref={form} onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-lg-6">
                       <div className="form_group">
@@ -331,7 +360,7 @@ export default function seo() {
                     </div>
                     <div className="col-lg-6">
                       <div className="form_group">
-                        <select className="form_control">
+                        <select name="service" className="form_control">
                           <option value="Search Engine Optimization">
                             Search Engine Optimization
                           </option>

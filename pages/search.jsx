@@ -27,7 +27,7 @@ export default function SearchPage({ search, category, featured, tags }) {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h2 style={{ color: "#fff" }}>Search</h2>
+                <h1>Search</h1>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>

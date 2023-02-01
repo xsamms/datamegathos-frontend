@@ -12,7 +12,7 @@ export default function terms() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h2 style={{ color: "#fff" }}>Terms and Conditions</h2>
+                <h1>Terms and Conditions</h1>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>

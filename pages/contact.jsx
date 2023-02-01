@@ -1,7 +1,70 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
+import { useState, useRef } from "react";
+import { useRouter } from "next/router";
+import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 export default function contact() {
+  const [allValues, setAllValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+  const form = useRef();
+
+  const router = useRouter();
+
+  const { name, phone, email, service, message } = allValues;
+
+  const changeHandler = (e) => {
+    setAllValues({ ...allValues, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(service);
+    emailjs
+      .sendForm(
+        "service_wn76fqg",
+        "template_5w0v6ib",
+        form.current,
+        "vm7EWYoc_fXz6jzMy"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    toast.success("Message sent successfully");
+    router.push({ pathname: "/" });
+
+    // try {
+    //   await fetch("http://localhost:3000/api/contact", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(allValues),
+    //   });
+
+    //   if (response.status === 200) {
+    //     toast.success("Email sent successfully");
+    //     router.push({
+    //       pathname: "/",
+    //     });
+    //   }
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  };
+
   return (
     <Layout title="Contact Us - Data megathos">
       <section
@@ -12,7 +75,7 @@ export default function contact() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h2 style={{ color: "#fff" }}>Contact Us</h2>
+                <h1>Contact Us</h1>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>
@@ -95,11 +158,13 @@ export default function contact() {
                 </div>
               </div>
               <div className="contact-form">
-                <form>
+                <form ref={form} onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-lg-6">
                       <div className="form_group">
                         <input
+                          onChange={changeHandler}
+                          value={name}
                           type="text"
                           className="form_control"
                           placeholder="Name"
@@ -111,6 +176,8 @@ export default function contact() {
                     <div className="col-lg-6">
                       <div className="form_group">
                         <input
+                          onChange={changeHandler}
+                          value={email}
                           type="email"
                           className="form_control"
                           placeholder="Email"
@@ -122,6 +189,8 @@ export default function contact() {
                     <div className="col-lg-6">
                       <div className="form_group">
                         <input
+                          onChange={changeHandler}
+                          value={phone}
                           type="phone"
                           className="form_control"
                           placeholder="Phone Number"
@@ -132,7 +201,11 @@ export default function contact() {
                     </div>
                     <div className="col-lg-6">
                       <div className="form_group">
-                        <select className="form_control">
+                        <select
+                          className="form_control"
+                          name="service"
+                          onChange={changeHandler}
+                        >
                           <option>Choose a service</option>
                           <option value="Website Design">Website Design</option>
                           <option value="Mobile App Development">
@@ -154,6 +227,8 @@ export default function contact() {
                     <div className="col-lg-12">
                       <div className="form_group">
                         <textarea
+                          onChange={changeHandler}
+                          value={message}
                           name="message"
                           placeholder="Message ..."
                           className="form_control"
@@ -162,7 +237,9 @@ export default function contact() {
                     </div>
                     <div className="col-lg-12">
                       <div className="form_group text-center">
-                        <button className="main-btn">SEND MESSAGE</button>
+                        <button type="submit" className="main-btn">
+                          SEND MESSAGE
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -179,9 +256,9 @@ export default function contact() {
             width="600"
             height="450"
             style={{ border: "0" }}
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </section>

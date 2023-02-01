@@ -12,7 +12,7 @@ export default function privacy() {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="page-title text-center">
-                <h2 style={{ color: "#fff" }}>Privacy Policy</h2>
+                <h1>Privacy Policy</h1>
                 <ul className="breadcrumb-link">
                   <li>
                     <Link href="/">Home</Link>
