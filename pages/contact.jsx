@@ -10,12 +10,6 @@ export default function Contact() {
 
   const router = useRouter();
 
-  const { name, phone, email, service, message } = allValues;
-
-  const changeHandler = (e) => {
-    setAllValues({ ...allValues, [e.target.name]: e.target.value });
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(service);
