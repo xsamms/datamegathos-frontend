@@ -1,18 +1,11 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
-export default function contact() {
-  const [allValues, setAllValues] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
+export default function Contact() {
   const form = useRef();
 
   const router = useRouter();

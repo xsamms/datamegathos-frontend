@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
-export default function socialMediaManagement() {
+export default function SocialMediaManagement() {
   const form = useRef();
 
   const router = useRouter();

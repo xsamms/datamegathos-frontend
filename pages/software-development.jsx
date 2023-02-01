@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
-export default function softwareDevelopment() {
+export default function SoftwareDevelopment() {
   const form = useRef();
 
   const router = useRouter();
