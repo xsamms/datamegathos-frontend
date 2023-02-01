@@ -150,8 +150,6 @@ export default function Contact() {
                     <div className="col-lg-6">
                       <div className="form_group">
                         <input
-                          onChange={changeHandler}
-                          value={name}
                           type="text"
                           className="form_control"
                           placeholder="Name"
@@ -163,8 +161,6 @@ export default function Contact() {
                     <div className="col-lg-6">
                       <div className="form_group">
                         <input
-                          onChange={changeHandler}
-                          value={email}
                           type="email"
                           className="form_control"
                           placeholder="Email"
@@ -176,8 +172,6 @@ export default function Contact() {
                     <div className="col-lg-6">
                       <div className="form_group">
                         <input
-                          onChange={changeHandler}
-                          value={phone}
                           type="phone"
                           className="form_control"
                           placeholder="Phone Number"
@@ -214,8 +208,6 @@ export default function Contact() {
                     <div className="col-lg-12">
                       <div className="form_group">
                         <textarea
-                          onChange={changeHandler}
-                          value={message}
                           name="message"
                           placeholder="Message ..."
                           className="form_control"
