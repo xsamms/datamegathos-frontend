@@ -4,6 +4,7 @@
     "@next/next/no-css-tags": "off",
     "@next/next/no-sync-scripts": "off",
     "@next/next/no-img-element": "off",
-    "react/no-unescaped-entities": 0
+    "react/no-unescaped-entities": 0,
+    "@next/next/next-script-for-ga": "off"
   }
 }
