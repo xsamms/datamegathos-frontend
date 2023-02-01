@@ -30,8 +30,8 @@ export default function App({ Component, pageProps }) {
         pauseOnHover
         theme="light"
       />
-      ;{/* Same as */}
-      <ToastContainer />;
+      {/* Same as */}
+      <ToastContainer />
       <Component {...pageProps} />
     </>
   );

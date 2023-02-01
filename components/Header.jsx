@@ -33,13 +33,8 @@ export default function Header() {
                       <li>
                         <span>
                           <i className="fal fa-envelope"></i>
-                          <Link href="/cdn-cgi/l/email-protection#aac3c4ccc5eaddcfc8d9c3decf84c9c5c7">
-                            <span
-                              className="__cf_email__"
-                              data-cfemail="f29b9c949db2859790819b8697dc919d9f"
-                            >
-                              creative@datamegathos.com
-                            </span>
+                          <Link href="/">
+                            <span>creative@datamegathos.com</span>
                           </Link>
                         </span>
                       </li>
