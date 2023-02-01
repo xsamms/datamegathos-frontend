@@ -182,11 +182,7 @@ export default function Contact() {
                     </div>
                     <div className="col-lg-6">
                       <div className="form_group">
-                        <select
-                          className="form_control"
-                          name="service"
-                          onChange={changeHandler}
-                        >
+                        <select className="form_control" name="service">
                           <option>Choose a service</option>
                           <option value="Website Design">Website Design</option>
                           <option value="Mobile App Development">
