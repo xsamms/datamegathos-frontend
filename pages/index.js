@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/Layout";
@@ -6,6 +6,19 @@ import { API_URI } from "../config";
 import BlogCard from "../components/BlogCard";
 
 export default function Home({ posts }) {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const windowWidth = window.innerWidth;
+    setWidth(windowWidth);
+  }, [width]);
+  useEffect(() => {
+    console.log(width);
+    // if (width < 600) {
+    //   window.location.reload();
+    // }
+  }, [width]);
+
   return (
     <Layout>
       <section
