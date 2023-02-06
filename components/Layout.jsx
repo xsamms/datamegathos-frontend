@@ -29,6 +29,22 @@ export default function Layout({ title, keyword, description, children }) {
           {dataLayer.push(arguments);}
           gtag('js', new Date()); gtag('config', 'UA-111472173-1');`}
         </script>
+
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10775302462"
+        ></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-10775302462');`}
+        </script>
+
+        <script>
+          {`gtag('event', 'conversion', {'send_to': 'AW-10775302462/xW14COak6YoYEL6iiJIo'});`}
+        </script>
       </Head>
       <Header />
       {children}
