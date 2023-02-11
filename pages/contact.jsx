@@ -31,29 +31,13 @@ export default function Contact() {
 
     toast.success("Message sent successfully");
     router.push({ pathname: "/" });
-
-    // try {
-    //   await fetch("http://localhost:3000/api/contact", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(allValues),
-    //   });
-
-    //   if (response.status === 200) {
-    //     toast.success("Email sent successfully");
-    //     router.push({
-    //       pathname: "/",
-    //     });
-    //   }
-    // } catch (error) {
-    //   console.log(error);
-    // }
   };
 
   return (
-    <Layout title="Contact Us - Data megathos">
+    <Layout
+      title="Contact Us - Data megathos"
+      description="Fill all fields and submit the form to contact us at Data Megathos"
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}

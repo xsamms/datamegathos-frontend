@@ -54,10 +54,9 @@ export default function Layout({ title, keyword, description, children }) {
 }
 
 Layout.defaultProps = {
-  title:
-    "Best Website design and mobile app development in Lagos, Nigeria - Data Megathos",
+  title: "Website design and mobile app development in Nigeria - Data Megathos",
   description:
-    "Website and Mobile App development agency with office in Lagos Nigeria",
+    "Website Design, Mobile App development and digital marketing agency in Lagos Nigeria",
   keyword:
     "Website Design, Mobile App Development, Website design in Lagos, Website Design in Nigeria, Mobile App development in Lagos, Webdite Development, Software development in Lagos Nigeria, SEO Company in Lagos Nigeria, Social Media Management, Google Ads Agency",
 };

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/Layout";
@@ -6,19 +5,6 @@ import { API_URI } from "../config";
 import BlogCard from "../components/BlogCard";
 
 export default function Home({ posts }) {
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const windowWidth = window.innerWidth;
-    setWidth(windowWidth);
-  }, [width]);
-  useEffect(() => {
-    console.log(width);
-    // if (width < 600) {
-    //   window.location.reload();
-    // }
-  }, [width]);
-
   return (
     <Layout>
       <section
@@ -55,7 +41,7 @@ export default function Home({ posts }) {
               <div className="about-content-box mb-60">
                 <div className="section-title mb-20 wow fadeInUp">
                   <span className="span">Who we are</span>
-                  <h2>We Are A Leading Web & Creative Agency</h2>
+                  <h2>We Are A Leading Web & Digital Agency</h2>
                 </div>
                 <p>
                   Data Megathos is a leading website design, mobile app
@@ -97,7 +83,7 @@ export default function Home({ posts }) {
               <div className="about-img mb-60  wow fadeInRight">
                 <Image
                   src="/assets/img/about-v4.jpg"
-                  alt=""
+                  alt="Data Megathos staff"
                   width={652}
                   height={530}
                 />

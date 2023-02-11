@@ -34,7 +34,11 @@ export default function WebsiteDesign() {
     router.push({ pathname: "/" });
   };
   return (
-    <Layout title="Website design and development - Data Megathos">
+    <Layout
+      title="Website design and development - Data Megathos"
+      description="Get a professional website for your business. Data Megathos is one of the best website design company in Nigeria"
+      keyword="web designers in lagos, website designers in lagos, web design agency in lagos, web design company in lagos, website design nigeria, website design company in lagos, website developers in lagos, best web design company in lagos, web developers in lagos, web development companies in lagos, professional website designer, corporate website design, ecommerce website development Nigeria, web development companies in lagos"
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -98,7 +102,7 @@ export default function WebsiteDesign() {
               <div className="about-img mb-80 wow fadeInLeft">
                 <Image
                   src="/assets/img/website-design-success.jpg"
-                  alt=""
+                  alt="Website Design"
                   width={445}
                   height={578}
                 />
@@ -170,7 +174,7 @@ export default function WebsiteDesign() {
                   <div className="portfolio-img mb-30">
                     <Image
                       src="/assets/img/responsive-website-design.jpg"
-                      alt="pResponsive Website Design"
+                      alt="Responsive Website Design"
                       width={525}
                       height={406}
                     />
@@ -202,7 +206,7 @@ export default function WebsiteDesign() {
                   <div className="portfolio-img mb-30">
                     <Image
                       src="/assets/img/beautiful-website.jpg"
-                      alt="Beautiful Website"
+                      alt="Beautiful Website Design"
                       width={525}
                       height={406}
                     />
@@ -233,7 +237,7 @@ export default function WebsiteDesign() {
                   <div className="portfolio-img mb-30">
                     <Image
                       src="/assets/img/seo-website.jpg"
-                      alt="SEO Optimized"
+                      alt="SEO Optimized Website Design"
                       width={525}
                       height={406}
                     />
@@ -264,7 +268,7 @@ export default function WebsiteDesign() {
                   <div className="portfolio-img mb-30">
                     <Image
                       src="/assets/img/Web-hosting-provider.jpg"
-                      alt="Web Hosting Provider"
+                      alt="Web Hosting Providers for Website Designers"
                       width={525}
                       height={406}
                     />

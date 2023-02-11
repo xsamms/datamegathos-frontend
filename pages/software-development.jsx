@@ -35,7 +35,11 @@ export default function SoftwareDevelopment() {
   };
 
   return (
-    <Layout title="Software Development - Data Megathos">
+    <Layout
+      title="Software Development - Data Megathos"
+      description="Integrate important software into your business process. Inventory software, accounting software, CRM software, hotel management software"
+      keyword="software development companies in lagos, best accounting software for small business, crm software company, hotel software company, inventory software company, top software development companies in nigeria, software developers in nigeria, software engineers in nigeria, software development companies in nigeria"
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}

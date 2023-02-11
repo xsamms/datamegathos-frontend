@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import { API_URI } from "../config";
@@ -9,6 +9,7 @@ import moment from "moment";
 
 export default function Tags({ tg, categories, featured, taags }) {
   const [term, setTerm] = useState("");
+  const [tagDesc, setTagDesc] = useState("");
   const router = useRouter();
 
   const handleSubmit = (e) => {
@@ -17,8 +18,21 @@ export default function Tags({ tg, categories, featured, taags }) {
     setTerm("");
   };
 
+  useEffect(() => {
+    const { tag } = router.query;
+    const targ = tag.split("-").join(" ");
+    setTagDesc(
+      targ.replace(/\b./g, function (m) {
+        return m.toUpperCase();
+      })
+    );
+  }, [router.query]);
+
   return (
-    <Layout title="Blog tags - Data Megathos">
+    <Layout
+      title="Blog tags - Data Megathos"
+      description={`${tagDesc} category - Data Megathos`}
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -32,7 +46,7 @@ export default function Tags({ tg, categories, featured, taags }) {
                   <li>
                     <Link href="/">Home</Link>
                   </li>
-                  <li className="active">Tags</li>
+                  <li className="active">Tag: {tagDesc}</li>
                 </ul>
               </div>
             </div>

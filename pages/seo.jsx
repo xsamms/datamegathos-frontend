@@ -35,7 +35,11 @@ export default function Seo() {
   };
 
   return (
-    <Layout title="Search Engine Optimization (SEO) - Data Megathos">
+    <Layout
+      title="Search Engine Optimization (SEO) - Data Megathos"
+      description="With search engine optimization (SEO), your website can be found and ranked in Search Engine Result Pages (SERPs)"
+      keyword="seo company nigeria, best seo company in nigeria, seo agency in nigeria, seo agency in lagos, seo company in lagos, seo expert in lagos, best seo company in lagos, seo services in nigeria, best seo agency in nigeria, seo services in lagos, seo expert nigeria"
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -98,7 +102,7 @@ export default function Seo() {
               <div className="about-img mb-80 wow fadeInLeft">
                 <Image
                   src="/assets/img/seo-banner.jpg"
-                  alt=""
+                  alt="Search Engine Optimization"
                   width={550}
                   height={600}
                 />

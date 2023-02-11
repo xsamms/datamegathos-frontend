@@ -8,6 +8,7 @@ import Image from "next/image";
 import moment from "moment";
 
 export default function SearchPage({ search, category, featured, tags }) {
+  console.log(search);
   const [term, setTerm] = useState("");
   const router = useRouter();
 
@@ -18,7 +19,10 @@ export default function SearchPage({ search, category, featured, tags }) {
   };
 
   return (
-    <Layout title={`Search: ${term} - Data Megathos`}>
+    <Layout
+      title={`Search: ${term} - Data Megathos`}
+      description={`Searching for ${term} in blog posts - Data Megathos`}
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -32,7 +36,7 @@ export default function SearchPage({ search, category, featured, tags }) {
                   <li>
                     <Link href="/">Home</Link>
                   </li>
-                  <li className="active">Search</li>
+                  <li className="active">Search for: {term}</li>
                 </ul>
               </div>
             </div>
@@ -145,7 +149,7 @@ export default function SearchPage({ search, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-1.jpg"
-                          alt=""
+                          alt="Instagram"
                           width={95}
                           height={85}
                         />
@@ -158,7 +162,7 @@ export default function SearchPage({ search, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-2.jpg"
-                          alt=""
+                          alt="Instagram"
                           width={95}
                           height={85}
                         />
@@ -171,7 +175,7 @@ export default function SearchPage({ search, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-3.jpg"
-                          alt=""
+                          alt="Instagram"
                           width={95}
                           height={85}
                         />
@@ -184,7 +188,7 @@ export default function SearchPage({ search, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-4.jpg"
-                          alt=""
+                          alt="Instagram"
                           width={95}
                           height={85}
                         />
@@ -197,7 +201,7 @@ export default function SearchPage({ search, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-5.jpg"
-                          alt=""
+                          alt="Instagram"
                           width={95}
                           height={85}
                         />
@@ -210,7 +214,7 @@ export default function SearchPage({ search, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-6.jpg"
-                          alt=""
+                          alt="Instagram"
                           width={95}
                           height={85}
                         />
@@ -223,7 +227,7 @@ export default function SearchPage({ search, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-7.jpg"
-                          alt=""
+                          alt="Instagram"
                           width={95}
                           height={85}
                         />
@@ -236,7 +240,7 @@ export default function SearchPage({ search, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-8.jpg"
-                          alt=""
+                          alt="Instagram"
                           width={95}
                           height={85}
                         />
@@ -249,7 +253,7 @@ export default function SearchPage({ search, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-9.jpg"
-                          alt=""
+                          alt="Instagram"
                           width={95}
                           height={85}
                         />

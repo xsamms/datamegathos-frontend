@@ -14,7 +14,7 @@ export default function Footer() {
                   <div className="footer-logo text-center mb-20">
                     <Link href="/" className="datapro_logo">
                       <Image
-                        src="/assets/img/Logo-Data-Megathos1.png"
+                        src="/assets/img/data-megathos-footer.jpg"
                         alt="Data Megathos Logo"
                         width={142}
                         height={80}

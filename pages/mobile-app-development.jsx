@@ -35,7 +35,11 @@ export default function MobileAppDevelopment() {
   };
 
   return (
-    <Layout title="Mobile App Development - Data Megathos">
+    <Layout
+      title="Mobile App Development - Data Megathos"
+      description="Develolp Android, iOS or cross-platform mobile app also known as hybrid mobile app"
+      keyword="mobile app developers in lagos, mobile app developers in nigeria, app development companies in nigeria, mobile app development company in nigeria, ios developer, android application developers, mobile app development company, app developers in lagos, app developers in nigeria"
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -98,7 +102,7 @@ export default function MobileAppDevelopment() {
               <div className="about-img mb-80 wow fadeInLeft">
                 <Image
                   src="/assets/img/mobile-app-service.jpg"
-                  alt=""
+                  alt="Mobile App Development"
                   width={625}
                   height={700}
                 />
@@ -177,7 +181,7 @@ export default function MobileAppDevelopment() {
                   <div className="portfolio-img mb-30">
                     <Image
                       src="/assets/img/app-speed.jpg"
-                      alt="portfolio"
+                      alt="Mobile App Speed"
                       width={525}
                       height={406}
                     />
@@ -211,7 +215,7 @@ export default function MobileAppDevelopment() {
                   <div className="portfolio-img mb-30">
                     <Image
                       src="/assets/img/outstanding-website.jpg"
-                      alt="portfolio"
+                      alt="Outstanding Mobile App"
                       width={525}
                       height={406}
                     />
@@ -243,7 +247,7 @@ export default function MobileAppDevelopment() {
                   <div className="portfolio-img mb-30">
                     <Image
                       src="/assets/img/mobolie-app-sales.jpg"
-                      alt="portfolio"
+                      alt="Mobile App Marketing"
                       width={525}
                       height={406}
                     />
@@ -276,7 +280,7 @@ export default function MobileAppDevelopment() {
                   <div className="portfolio-img mb-30">
                     <Image
                       src="/assets/img/simple-mobile-app.jpg"
-                      alt="portfolio"
+                      alt="Simple Mobile App"
                       width={525}
                       height={406}
                     />

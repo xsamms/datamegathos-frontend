@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import { API_URI } from "../config";
@@ -9,16 +9,31 @@ import moment from "moment";
 
 export default function Category({ cate, categories, featured, tags }) {
   const [term, setTerm] = useState("");
+  const [categoryDesc, setCategoryDesc] = useState("");
   const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(term);
     router.push(`/search?term=${term}`);
     setTerm("");
   };
 
+  useEffect(() => {
+    const { category } = router.query;
+    const cat = category.split("-").join(" ");
+    setCategoryDesc(
+      cat.replace(/\b./g, function (m) {
+        return m.toUpperCase();
+      })
+    );
+  }, [router.query]);
+
   return (
-    <Layout title="Blog category - Data Megathos">
+    <Layout
+      title="Blog category - Data Megathos"
+      description={`${categoryDesc} category - Data Megathos`}
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -32,7 +47,7 @@ export default function Category({ cate, categories, featured, tags }) {
                   <li>
                     <Link href="/">Home</Link>
                   </li>
-                  <li className="active">Category</li>
+                  <li className="active">Category: {categoryDesc}</li>
                 </ul>
               </div>
             </div>

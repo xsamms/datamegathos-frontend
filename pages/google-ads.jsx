@@ -35,7 +35,11 @@ export default function GoogleAds() {
   };
 
   return (
-    <Layout title="Google Ads - Data Megathos">
+    <Layout
+      title="Google Ads - Data Megathos"
+      description="Reach customers interest in your product or service with Google Ads"
+      keyword="Google Ads, Google Ads expert, PPC manager, online advertising expert, Google Ads consultant, Google campaign manager, ppc professionals"
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -98,7 +102,7 @@ export default function GoogleAds() {
               <div className="about-img mb-80 wow fadeInLeft">
                 <Image
                   src="/assets/img/google-ads1.jpg"
-                  alt=""
+                  alt="Google Ads"
                   width={570}
                   height={650}
                 />
@@ -200,7 +204,7 @@ export default function GoogleAds() {
                   <div className="portfolio-img mb-30">
                     <Image
                       src="/assets/img/increase-brand-awareness-google.jpg"
-                      alt="portfolio"
+                      alt="Google advertising"
                       width={525}
                       height={406}
                     />
@@ -236,7 +240,7 @@ export default function GoogleAds() {
                   <div className="portfolio-img mb-30">
                     <Image
                       src="/assets/img/google-target-audience.jpg"
-                      alt=""
+                      alt="Google Ad Targeting"
                       width={525}
                       height={406}
                     />

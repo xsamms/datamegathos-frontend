@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export default function about() {
   return (
-    <Layout title="About - Data Megathos">
+    <Layout
+      title="About - Data Megathos"
+      description="Data Megathos is a leading website design, mobile app development and digital marketing agency in Lagos, Nigeria."
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -173,11 +176,6 @@ export default function about() {
             <div className="col-lg-6">
               <div className="section-title text-center mb-65 wow fadeInUp">
                 <h2>Our Work Process</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim{" "}
-                </p>
               </div>
             </div>
           </div>
@@ -187,7 +185,7 @@ export default function about() {
                 <div className="icon">
                   <Image
                     src="/assets/img/icons/process-1.svg"
-                    alt=""
+                    alt="Collecting Info Data"
                     width={60}
                     height={60}
                   />
@@ -206,7 +204,7 @@ export default function about() {
                 <div className="icon">
                   <Image
                     src="/assets/img/icons/process-2.svg"
-                    alt=""
+                    alt="Setup Work Target"
                     width={60}
                     height={60}
                   />
@@ -225,7 +223,7 @@ export default function about() {
                 <div className="icon">
                   <Image
                     src="/assets/img/icons/process-3.svg"
-                    alt=""
+                    alt="Creative Ideas"
                     width={60}
                     height={60}
                   />
@@ -247,7 +245,7 @@ export default function about() {
                 <div className="icon">
                   <Image
                     src="/assets/img/icons/service-4.svg"
-                    alt=""
+                    alt="Initialize Project"
                     width={60}
                     height={60}
                   />
@@ -266,7 +264,7 @@ export default function about() {
                 <div className="icon">
                   <Image
                     src="/assets/img/icons/service-6.svg"
-                    alt=""
+                    alt="Test Project"
                     width={60}
                     height={60}
                   />
@@ -285,7 +283,7 @@ export default function about() {
                 <div className="icon">
                   <Image
                     src="/assets/img/icons/service-1.svg"
-                    alt=""
+                    alt="Deploy Project"
                     width={60}
                     height={60}
                   />
@@ -295,6 +293,145 @@ export default function about() {
                   <p>
                     This process involves rolling out the project for the client
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="team-area-v4 pt-120 pb-90">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              <div className="section-title text-center mb-65 wow fadeInUp">
+                <h2>Meet our Team</h2>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="single-team-member mb-30 wow fadeInUp">
+                <div className="team-img">
+                  <Image
+                    src="/assets/img/team/sam.jpg"
+                    alt="Samuel Williams"
+                    width={370}
+                    height={440}
+                  />
+                  <div className="team-overlay">
+                    <div className="team-social">
+                      <ul className="social-link">
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-facebook-f" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-twitter" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-instagram" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-linkedin-in" />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="member-info">
+                  <h5>Samuel Williams</h5>
+                  <p className="position">Head, Development</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="single-team-member mb-30 wow fadeInDown">
+                <div className="team-img">
+                  <Image
+                    src="/assets/img/team/Sarah.jpg"
+                    alt="Sarah"
+                    width={370}
+                    height={440}
+                  />
+                  <div className="team-overlay">
+                    <div className="team-social">
+                      <ul className="social-link">
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-facebook-f" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-twitter" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-instagram" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-linkedin-in" />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="member-info">
+                  <h5>Sarah Uduak</h5>
+                  <p className="position">Head, Administration</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="single-team-member mb-30 wow fadeInUp">
+                <div className="team-img">
+                  <Image
+                    src="/assets/img/team/Moris.jpg"
+                    alt="Moris"
+                    width={370}
+                    height={440}
+                  />
+                  <div className="team-overlay">
+                    <div className="team-social">
+                      <ul className="social-link">
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-facebook-f" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-twitter" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-instagram" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-linkedin-in" />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="member-info">
+                  <h5>Moris Nwajei</h5>
+                  <p className="position">Head, PR</p>
                 </div>
               </div>
             </div>

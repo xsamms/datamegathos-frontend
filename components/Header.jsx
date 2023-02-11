@@ -19,7 +19,7 @@ export default function Header() {
               {width < 600 ? (
                 <a href="/">
                   <Image
-                    src="/assets/img/Logo-Data-Megathos.png"
+                    src="/assets/img/data-megathos-logo.png"
                     alt="Data Megathos Logo"
                     width={150}
                     height={80}
@@ -28,7 +28,7 @@ export default function Header() {
               ) : (
                 <Link href="/">
                   <Image
-                    src="/assets/img/Logo-Data-Megathos.png"
+                    src="/assets/img/data-megathos-logo.png"
                     alt="Data Megathos Logo"
                     width={150}
                     height={80}

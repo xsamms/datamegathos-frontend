@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export default function privacy() {
   return (
-    <Layout title="Privacy Policy - Data Megathos">
+    <Layout
+      title="Privacy Policy - Data Megathos"
+      description="Privacy Policy of Data Megathos"
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}

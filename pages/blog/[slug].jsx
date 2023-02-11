@@ -30,7 +30,10 @@ export default function BlogDetail({ blog, category, featured, tags }) {
     );
   };
   return (
-    <Layout>
+    <Layout
+      title={`${blog.data[0].attributes.title} - Data Megathos`}
+      description={`${blog.data[0].attributes.title} blog post - Data Megathos`}
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(/assets/img/breadcrumbs-bg.jpg)" }}
@@ -217,7 +220,7 @@ export default function BlogDetail({ blog, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-1.jpg"
-                          alt=""
+                          alt="Instagram post"
                           width={95}
                           height={85}
                         />
@@ -230,7 +233,7 @@ export default function BlogDetail({ blog, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-2.jpg"
-                          alt=""
+                          alt="Instagram post"
                           width={95}
                           height={85}
                         />
@@ -243,7 +246,7 @@ export default function BlogDetail({ blog, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-3.jpg"
-                          alt=""
+                          alt="Instagram post"
                           width={95}
                           height={85}
                         />
@@ -256,7 +259,7 @@ export default function BlogDetail({ blog, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-4.jpg"
-                          alt=""
+                          alt="Instagram post"
                           width={95}
                           height={85}
                         />
@@ -269,7 +272,7 @@ export default function BlogDetail({ blog, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-5.jpg"
-                          alt=""
+                          alt="Instagram post"
                           width={95}
                           height={85}
                         />
@@ -282,7 +285,7 @@ export default function BlogDetail({ blog, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-6.jpg"
-                          alt=""
+                          alt="Instagram post"
                           width={95}
                           height={85}
                         />
@@ -295,7 +298,7 @@ export default function BlogDetail({ blog, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-7.jpg"
-                          alt=""
+                          alt="Instagram post"
                           width={95}
                           height={85}
                         />
@@ -308,7 +311,7 @@ export default function BlogDetail({ blog, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-8.jpg"
-                          alt=""
+                          alt="Instagram post"
                           width={95}
                           height={85}
                         />
@@ -321,7 +324,7 @@ export default function BlogDetail({ blog, category, featured, tags }) {
                       <a href="#">
                         <Image
                           src="/assets/img/insta-post/insta-post-9.jpg"
-                          alt=""
+                          alt="Instagram post"
                           width={95}
                           height={85}
                         />

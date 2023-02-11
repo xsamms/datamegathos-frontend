@@ -35,7 +35,11 @@ export default function SocialMediaManagement() {
   };
 
   return (
-    <Layout title="Social Media Management - Data Megathos">
+    <Layout
+      title="Social Media Management - Data Megathos"
+      description="Grow your business with social media marketing. Facebook marketing, Instagram marketing, Twitter marketing, LinkedIn marketing, YouTube marketing"
+      keyword="digital marketing firms in lagos, online marketing agency in lagos, social media marketing in Nigeria, social media management in Lagos, digital marketing services in lagos, best digital marketing agency in nigeria, top digital marketing agencies in lagos"
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
@@ -98,7 +102,7 @@ export default function SocialMediaManagement() {
               <div className="about-img mb-80 wow fadeInLeft">
                 <Image
                   src="/assets/img/social-media.jpg"
-                  alt=""
+                  alt="Social Media Marketing"
                   width={600}
                   height={466}
                 />

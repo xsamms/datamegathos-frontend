@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export default function terms() {
   return (
-    <Layout title="Terms and Conditions - Data Megathos">
+    <Layout
+      title="Terms and Conditions - Data Megathos"
+      description="Terms and Conditions of Data Megathos"
+    >
       <section
         className="breadcrumbs-area bg_cover"
         style={{ backgroundImage: "url(assets/img/breadcrumbs-bg.jpg)" }}
