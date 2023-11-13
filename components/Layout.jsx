@@ -24,10 +24,20 @@ export default function Layout({ title, keyword, description, children }) {
           async
           src="https://www.googletagmanager.com/gtag/js?id=UA-111472173-1"
         ></script>
-        <script>
+        {/* <script>
           {`window.dataLayer = window.dataLayer || []; function gtag()
           {dataLayer.push(arguments);}
           gtag('js', new Date()); gtag('config', 'UA-111472173-1');`}
+        </script> */}
+
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1QMFN7LCB"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
+
+          gtag('config', 'G-B1QMFN7LCB');
         </script>
 
         <script
