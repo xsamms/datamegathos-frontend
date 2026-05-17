@@ -1,26 +1,736 @@
 @import "tailwindcss";
 
+/* ===================================================================
+   DATA MEGATHOS — Design System
+   "Futuristic Engineering" · Deep Crimson Dark-Mode
+   =================================================================== */
+
+/* ---------- Design Tokens (CSS Custom Properties) ---------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Surface palette */
+  --surface: #1e0f10;
+  --surface-dim: #1e0f10;
+  --surface-bright: #473535;
+  --surface-container-lowest: #180a0b;
+  --surface-container-low: #271718;
+  --surface-container: #2b1b1c;
+  --surface-container-high: #372626;
+  --surface-container-highest: #423030;
+
+  /* On-surface (text on surfaces) */
+  --on-surface: #f9dcdb;
+  --on-surface-variant: #e3bebe;
+  --inverse-surface: #f9dcdb;
+  --inverse-on-surface: #3e2c2c;
+
+  /* Outline */
+  --outline: #aa8989;
+  --outline-variant: #5b4040;
+
+  /* Surface tint */
+  --surface-tint: #ffb3b4;
+
+  /* Primary */
+  --primary: #ffb3b4;
+  --on-primary: #680017;
+  --primary-container: #dc314a;
+  --on-primary-container: #fffeff;
+  --inverse-primary: #bb1335;
+
+  /* Secondary */
+  --secondary: #ffb2b9;
+  --on-secondary: #561d26;
+  --secondary-container: #74353d;
+  --on-secondary-container: #f6a1a9;
+
+  /* Tertiary */
+  --tertiary: #73d8bf;
+  --on-tertiary: #00382d;
+  --tertiary-container: #00856f;
+  --on-tertiary-container: #fcfffc;
+
+  /* Error */
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+
+  /* Fixed palettes */
+  --primary-fixed: #ffdada;
+  --primary-fixed-dim: #ffb3b4;
+  --on-primary-fixed: #40000b;
+  --on-primary-fixed-variant: #920025;
+  --secondary-fixed: #ffdadc;
+  --secondary-fixed-dim: #ffb2b9;
+  --on-secondary-fixed: #3a0812;
+  --on-secondary-fixed-variant: #71333b;
+  --tertiary-fixed: #8ff5da;
+  --tertiary-fixed-dim: #73d8bf;
+  --on-tertiary-fixed: #002019;
+  --on-tertiary-fixed-variant: #005143;
+
+  /* Background */
+  --background: #1e0f10;
+  --on-background: #f9dcdb;
+  --surface-variant: #423030;
+
+  /* Derived brand colors */
+  --brand-bg: #26000a;
+  --brand-surface: #3d0a14;
+  --brand-surface-elevated: #541420;
+  --brand-border: #6b1a29;
+  --brand-accent-green: #25D366;
+
+  /* Spacing */
+  --container-max: 1200px;
+  --section-gap: 4rem;
+  --card-padding: 2rem;
+  --gutter: 1.5rem;
+  --header-height: 4.5rem;
+
+  /* Radius */
+  --rounded-sm: 0.25rem;
+  --rounded: 0.5rem;
+  --rounded-md: 0.75rem;
+  --rounded-lg: 1rem;
+  --rounded-xl: 1.5rem;
+  --rounded-full: 9999px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 150ms var(--ease-out);
+  --transition-base: 250ms var(--ease-out);
+  --transition-slow: 400ms var(--ease-out);
 }
 
+/* ---------- Dark mode via class strategy ---------- */
+@variant dark (&:where(.dark, .dark *));
+
+/* ---------- Tailwind v4 @theme Integration ---------- */
 @theme inline {
+  /* === Page-level design colors (from HTML spec) === */
+  --color-primary: #dc314a;
+  --color-primary-dark: #b0273b;
+  --color-primary-light: #f8e6e9;
+  --color-background-light: #ffffff;
+  --color-background-dark: #26000a;
+  --color-surface: #3d0a14;
+  --color-surface-variant: #541420;
+  --color-border: #6b1a29;
+  --color-text-main: #26000a;
+  --color-text-muted: #6b4d55;
+  --color-border-color: #f2e8ea;
+
+  /* === M3 surface tiers (used on blog/about pages) === */
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+
+  /* === Text / on-surface === */
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+
+  /* === Outline === */
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+
+  /* === Primary variants === */
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+
+  /* === Secondary === */
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+
+  /* === Tertiary === */
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+
+  /* === Error === */
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+
+  /* === Legacy / background === */
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-on-background: var(--on-background);
+
+  /* === Brand shortcuts === */
+  --color-brand-bg: var(--brand-bg);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-surface-elevated: var(--brand-surface-elevated);
+  --color-brand-border: var(--brand-border);
+  --color-brand-accent-green: var(--brand-accent-green);
+
+  /* === Font families === */
+  --font-sans: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+
+  /* === Spacing === */
+  --spacing-section: var(--section-gap);
+  --spacing-card: var(--card-padding);
+  --spacing-gutter: var(--gutter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ---------- Base Reset & Global Styles ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--brand-bg);
+  color: var(--on-surface);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Selection */
+::selection {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface-container-lowest);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--outline-variant);
+  border-radius: var(--rounded-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--outline);
+}
+
+/* ---------- Typography Utilities ---------- */
+.text-display {
+  font-size: 3.75rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.033em;
+}
+
+.text-h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.text-h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.text-body-lg {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-body-md {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.text-label-sm {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.text-overline {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ---------- Component: Glass Header ---------- */
+.glass-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-height);
+  background: rgba(38, 0, 10, 0.72);
+  backdrop-filter: blur(16px) saturate(1.8);
+  -webkit-backdrop-filter: blur(16px) saturate(1.8);
+  border-bottom: 1px solid var(--brand-border);
+  transition: background var(--transition-base);
+}
+
+/* ---------- Component: Cards ---------- */
+.card {
+  background: var(--brand-surface);
+  border: 1px solid var(--brand-border);
+  border-radius: var(--rounded-md);
+  padding: var(--card-padding);
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--primary-container);
+  opacity: 0.04;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+  pointer-events: none;
+}
+
+.card:hover {
+  border-color: var(--primary-container);
+  box-shadow:
+    0 10px 30px -10px rgba(220, 49, 74, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover::before {
+  opacity: 0.08;
+  transform: scale(1.3);
+}
+
+/* ---------- Component: Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+  border-radius: var(--rounded);
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+  border: 1px solid transparent;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  border-color: var(--primary-container);
+}
+.btn-primary:hover {
+  background: #e8405a;
+  box-shadow: 0 0 24px rgba(220, 49, 74, 0.35);
+}
+
+.btn-secondary {
+  background: var(--brand-surface);
+  color: var(--on-surface);
+  border-color: var(--brand-border);
+}
+.btn-secondary:hover {
+  border-color: var(--primary-container);
+  background: var(--brand-surface-elevated);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--on-surface-variant);
+  border-color: transparent;
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--on-surface);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---------- Component: Input Fields ---------- */
+.input {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  background: var(--brand-surface);
+  border: 1px solid var(--brand-border);
+  border-radius: var(--rounded);
+  color: var(--on-surface);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--outline);
+}
+
+.input:focus {
+  border-color: var(--primary-container);
+  box-shadow: 0 0 0 3px rgba(220, 49, 74, 0.2);
+}
+
+textarea.input {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+/* Checkbox override */
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 1.5px solid var(--brand-border);
+  border-radius: 4px;
+  background: var(--brand-surface);
+  cursor: pointer;
+  position: relative;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+.checkbox:checked {
+  background: var(--primary-container);
+  border-color: var(--primary-container);
+}
+.checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: white;
+}
+
+/* ---------- Component: Badge ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: var(--rounded-full);
+  line-height: 1.4;
+}
+
+.badge-primary {
+  background: rgba(220, 49, 74, 0.15);
+  color: var(--primary);
+}
+
+.badge-secondary {
+  background: rgba(116, 53, 61, 0.4);
+  color: var(--secondary);
+}
+
+.badge-tertiary {
+  background: rgba(0, 133, 111, 0.2);
+  color: var(--tertiary);
+}
+
+.badge-warning {
+  background: rgba(255, 179, 180, 0.15);
+  color: #ffd166;
+}
+
+/* ---------- Component: Modal / Overlay ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: fadeIn 200ms var(--ease-out);
+}
+
+.modal {
+  background: var(--surface-container);
+  border: 1px solid var(--brand-border);
+  border-radius: var(--rounded-md);
+  width: 100%;
+  max-width: 42rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  animation: slideUp 300ms var(--ease-out);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ---------- Prose (article body content) ---------- */
+.prose-dark {
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+}
+
+.prose-dark h1,
+.prose-dark h2,
+.prose-dark h3,
+.prose-dark h4 {
+  color: var(--on-surface);
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose-dark h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--outline-variant);
+  padding-bottom: 0.5rem;
+}
+
+.prose-dark h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.prose-dark p {
+  margin-bottom: 1em;
+}
+
+.prose-dark a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-dark a:hover {
+  color: var(--primary-container);
+}
+
+.prose-dark strong {
+  color: var(--on-surface);
+  font-weight: 700;
+}
+
+.prose-dark ul,
+.prose-dark ol {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.prose-dark li {
+  margin-bottom: 0.5em;
+}
+
+.prose-dark pre {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--rounded);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.prose-dark code {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.875em;
+  background: var(--surface-container-high);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+.prose-dark pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* ---------- Layout Utilities ---------- */
+.container-narrow {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container-narrow {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-narrow {
+    padding-inline: 5rem;
+  }
+}
+
+/* ---------- Section Separator ---------- */
+.section-sep {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--brand-border),
+    transparent
+  );
+  margin: var(--section-gap) 0;
+}
+
+/* ---------- Spinner ---------- */
+.spinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid var(--outline-variant);
+  border-top-color: var(--primary-container);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Code block inside pages ---------- */
+.code-block {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--rounded-md);
+  padding: 1.5rem;
+  overflow-x: auto;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--on-surface-variant);
+}
+
+/* ---------- Focus visible ring ---------- */
+:focus-visible {
+  outline: 2px solid var(--primary-container);
+  outline-offset: 2px;
+}
+
+/* ---------- Link base ---------- */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Subtle Gradient Background ---------- */
+.bg-gradient-brand {
+  background: linear-gradient(
+    168deg,
+    var(--brand-bg) 0%,
+    #1a0008 40%,
+    var(--brand-bg) 100%
+  );
+}
+
+/* ---------- CMS Admin Styles ---------- */
+.cms-root {
+  min-height: 100vh;
+  background: var(--brand-bg);
+}
+
+.cms-sidebar {
+  background: var(--brand-bg);
+  width: 16rem;
+  border-right: 1px solid var(--brand-border);
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+@media (max-width: 1023px) {
+  .cms-sidebar {
+    display: none;
+  }
+}
+
+.cms-topnav {
+  background: rgba(38, 0, 10, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--brand-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cms-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.cms-scrollbar::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+.cms-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--brand-border);
+  border-radius: 10px;
+}
+.cms-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--outline-variant);
 }

@@ -1,0 +1,95 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String
+  password  String   // bcrypt hash
+  role      Role     @default(ADMIN)
+  avatar    String?  // Cloudinary URL
+  posts     Post[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  title     String
+  slug      String   @unique
+  content   String
+  excerpt   String?
+  published Boolean  @default(false)
+  featured  Boolean  @default(false)
+  author    String?  // Display name
+  image     String?  // Cloudinary URL
+  category  String?
+  tags      String?  // JSON array as string for flexibility
+  views     Int      @default(0)
+  userId    Int?
+  user      User?     @relation(fields: [userId], references: [id])
+  comments  Comment[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([published])
+  @@index([createdAt])
+  @@index([userId])
+}
+
+model Portfolio {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  description String
+  client      String?
+  category    String   // "Mobile" | "Web" | "AI" | "CMS"
+  techs       String?  // JSON array as string
+  image       String   // Main Cloudinary image URL
+  images      String?  // JSON array of additional Cloudinary URLs
+  liveUrl     String?
+  caseStudy   String?  // Rich text/markdown case study content
+  featured    Boolean  @default(false)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([published])
+  @@index([category])
+}
+
+model Comment {
+  id          Int       @id @default(autoincrement())
+  content     String
+  authorName  String
+  authorEmail String?
+  
+  postId      Int
+  post        Post      @relation(fields: [postId], references: [id], onDelete: Cascade)
+  
+  parentId    Int?
+  parent      Comment?  @relation("CommentReplies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies     Comment[] @relation("CommentReplies")
+  
+  approved    Boolean   @default(true) // For manual moderation
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([postId])
+  @@index([parentId])
+}

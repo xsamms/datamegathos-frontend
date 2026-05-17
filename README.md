@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DataMegaThos - Modern Blog Platform
 
-## Getting Started
+A fully-featured, production-ready blog application built with cutting-edge web technologies.
 
-First, run the development server:
+## 🎯 Overview
+
+DataMegaThos is a modern blog platform demonstrating best practices in full-stack web development. It showcases integration of:
+
+- **Next.js 16** with App Router and Server Components
+- **React 19** with latest features
+- **TypeScript** for type safety
+- **Tailwind CSS** for beautiful UI
+- **Prisma** for database ORM
+- **Supabase PostgreSQL** for reliable data storage
+- **TanStack Query** for efficient data fetching
+- **Zod** for schema validation
+
+## ✨ Features
+
+- 📝 Create, read, update, and delete blog posts
+- 🏷️ Organize posts with categories and tags
+- ⭐ Mark posts as featured
+- 👁️ Automatic view count tracking
+- 📱 Fully responsive design
+- ⚡ High-performance caching with TanStack Query
+- 🔐 Type-safe API routes
+- 🎨 Beautiful UI with Tailwind CSS
+- 📊 Pagination support
+- 🔍 SEO-friendly
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ and npm 9+
+- Supabase account (free tier available)
+
+### Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Set up environment variables (see SETUP_GUIDE.md)
+cp .env.local.example .env.local
+
+# Run database migrations
+npx prisma migrate dev
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to view your blog!
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Detailed Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+For comprehensive setup instructions, see [SETUP_GUIDE.md](./SETUP_GUIDE.md)
 
-## Learn More
+## 📚 Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org)
+- [Prisma Documentation](https://prisma.io)
+- [Supabase Documentation](https://supabase.com/docs)
+- [TanStack Query](https://tanstack.com/query)
+- [Tailwind CSS](https://tailwindcss.com)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Check out [SETUP_GUIDE.md](./SETUP_GUIDE.md) for comprehensive deployment instructions.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
