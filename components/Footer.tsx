@@ -86,25 +86,25 @@ export function Footer() {
             </h4>
             <a
               className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="#"
+              href="https://www.facebook.com/datamegathos" target="_blank"
             >
               Facebook
             </a>
             <a
               className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="#"
+              href="https://www.linkedin.com/company/data-megathos" target="_blank"
             >
               LinkedIn
             </a>
             <a
               className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="#"
+              href="https://www.x.com/datamegathos" target="_blank"
             >
               X (Twitter)
             </a>
             <a
               className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="#"
+              href="https://www.instagram.com/datamegathos" target="_blank"
             >
               Instagram
             </a>
