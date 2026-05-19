@@ -50,7 +50,7 @@ export default function AboutPage() {
           Our Story
         </h1>
         <p className="text-base font-normal leading-relaxed max-w-[800px] text-slate-300">
-          Founded in 2020, Data Megathos started with a simple idea: to
+          Founded in 2017, Data Megathos started with a simple idea: to
           help businesses grow through scalable and robust technology
           solutions. What began as a small team of three developers has
           grown into a full-service agency. Today, we&apos;re proud to

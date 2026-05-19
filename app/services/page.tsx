@@ -152,16 +152,16 @@ export default function ServicesPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/#contact"
+            href="/contact"
             className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-bold transition-all"
           >
             Start a Project
           </Link>
           <Link
-            href="/#contact"
+            href="https://wa.me/2348162027949"
             className="border border-primary/40 hover:bg-primary/10 text-primary px-8 py-3 rounded-lg font-bold transition-all"
           >
-            Talk to an Expert
+            Chat with an Expert
           </Link>
         </div>
       </div>

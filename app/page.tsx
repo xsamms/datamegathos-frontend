@@ -23,12 +23,12 @@ export default function Home() {
               intelligent AI automation.
             </p>
             <div className="flex flex-wrap gap-4 mt-4">
-              <button className="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+              <Link href="/quote" className="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
                 <span className="truncate">Start Your Project</span>
-              </button>
-              <button className="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-surface border border-border text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-surface-variant transition-colors">
+              </Link>
+              <Link href="/portfolio" className="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-surface border border-border text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-surface-variant transition-colors">
                 <span className="truncate">View Our Work</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
