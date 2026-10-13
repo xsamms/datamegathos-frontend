@@ -48,6 +48,19 @@ const services = [
     ],
   },
   {
+    id: "digital-marketing",
+    icon: "campaign",
+    title: "Digital Marketing & SEO",
+    tag: "Growth & Acquisition",
+    description:
+      "Turn clicks into measurable revenue. We combine technical SEO, Google Ads, and targeted social media marketing with conversion rate optimization to drive customer acquisition for businesses in Lagos and across Nigeria.",
+    features: [
+      "Technical SEO & Google Ads Management",
+      "Paid Social Media (Meta, TikTok & LinkedIn)",
+      "Conversion Tracking & Live Analytics",
+    ],
+  },
+  {
     id: "web-apps",
     icon: "language",
     title: "Web Application Engineering",
@@ -265,7 +278,7 @@ export default function ServicesPage() {
             Start a Project
           </Link>
           <a
-            href="https://wa.me/2348162027949"
+            href="https://wa.me/2349068954455"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-primary/40 hover:bg-primary/10 text-primary px-8 py-3 rounded-lg font-bold transition-all"

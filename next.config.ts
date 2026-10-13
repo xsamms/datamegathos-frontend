@@ -18,13 +18,38 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/digital-marketing',
+        destination: '/digital-marketing-lagos',
+        permanent: true,
+      },
+      {
+        source: '/services/digital-marketing',
+        destination: '/digital-marketing-lagos',
+        permanent: true,
+      },
+      {
+        source: '/website',
+        destination: '/web-design-lagos',
+        permanent: true,
+      },
+      {
         source: '/services/web-design-lagos',
-        destination: '/services#web-design',
+        destination: '/web-design-lagos',
+        permanent: true,
+      },
+      {
+        source: '/mobile-app',
+        destination: '/mobile-app-development',
+        permanent: true,
+      },
+      {
+        source: '/mobile-apps',
+        destination: '/mobile-app-development',
         permanent: true,
       },
       {
         source: '/services/mobile-app-development',
-        destination: '/services#mobile-apps',
+        destination: '/mobile-app-development',
         permanent: true,
       },
       {

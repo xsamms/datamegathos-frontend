@@ -112,7 +112,7 @@ export function Footer() {
         </div>
       </div>
       <div className="pt-8 mt-8 border-t border-primary/10 flex flex-wrap justify-between items-center text-xs text-slate-500 gap-4">
-        <p>© 2024 Data Megathos. All rights reserved.</p>
+        <p>© 2026 Data Megathos. All Rights Reserved. Software Development Company &amp; Digital Agency in Lagos, Nigeria.</p>
         <div className="flex gap-6">
           <a className="hover:text-white transition-colors" href="/privacy-policy">
             Privacy Policy

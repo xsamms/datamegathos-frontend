@@ -7,10 +7,10 @@ import { useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Contact", href: "/contact" },
+  { label: "Website", href: "/web-design-lagos" },
+  { label: "Mobile App", href: "/mobile-app-development" },
+  { label: "Digital Marketing", href: "/digital-marketing-lagos" },
   { label: "Blog", href: "/blog" },
 ];
 
@@ -19,7 +19,7 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-border px-4 lg:px-10 py-4 sticky top-0 bg-background-dark/90 backdrop-blur-md z-50 rounded-lg">
+    <header className="flex items-center justify-between whitespace-nowrap border-b border-border px-4 lg:px-10 py-4 mb-6 sticky top-0 bg-background-dark/90 backdrop-blur-md z-50 rounded-lg">
       <Link href="/" className="flex items-center gap-4 text-white">
         <Image
           src="/images/Data-Megathos-new-logo1.jpg"
@@ -28,9 +28,14 @@ export function Header() {
           height={32}
           className="size-8 object-contain"
         />
-        <h2 className="text-xl font-bold leading-tight tracking-[-0.015em]">
-          Data Megathos
-        </h2>
+        <div>
+          <p className="text-xl font-bold leading-tight tracking-[-0.015em]">
+            Data Megathos
+          </p>
+          <p className="text-[10px] text-slate-400 font-medium tracking-wider uppercase hidden sm:block">
+            Software Development Company in Lagos
+          </p>
+        </div>
       </Link>
       <div className="hidden md:flex flex-1 justify-end gap-8">
         <nav className="flex items-center gap-9">

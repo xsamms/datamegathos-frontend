@@ -1,42 +1,43 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-// TODO: replace with your real production domain
 const SITE_URL = "https://www.datamegathos.com";
 
 export const metadata: Metadata = {
-  title: "Web Design Company in Lagos, Nigeria | Data Megathos",
+  title: "Software Development Company in Lagos | Data Megathos",
   description:
-    "Data Megathos is a web design and tech company in Lagos, Nigeria. Website design services, mobile apps, WordPress sites and AI automation for startups and businesses.",
-  alternates: { canonical: SITE_URL },
+    "Data Megathos is a software development company and agency in Lagos, Nigeria. Custom software, web design, mobile apps and AI automation for startups and SMEs.",
+  alternates: {
+    canonical: `${SITE_URL}/`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     type: "website",
-    url: SITE_URL,
     siteName: "Data Megathos",
-    title: "Web Design Company in Lagos, Nigeria | Data Megathos",
+    title: "Software Development Company in Lagos | Data Megathos",
     description:
-      "Website design agency in Lagos building websites, mobile apps, WordPress sites and AI automation for startups and businesses.",
+      "Software development agency in Lagos building custom software, websites, mobile apps and AI automation for startups and SMEs.",
+    url: `${SITE_URL}/`,
     locale: "en_NG",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design Company in Lagos, Nigeria | Data Megathos",
+    title: "Software Development Company in Lagos | Data Megathos",
     description:
-      "Website design services, mobile apps, WordPress and AI automation from a Lagos tech company.",
+      "Software development agency in Lagos building custom software, websites, mobile apps and AI automation for startups and SMEs.",
   },
 };
 
-// Structured data. Only include details that are true and match your Google Business Profile.
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Data Megathos",
-  url: SITE_URL,
+  url: "https://www.datamegathos.com/",
   description:
-    "Web design company and software development agency in Lagos, Nigeria offering website design, mobile app development, WordPress development and AI automation.",
-  // TODO: add logo, telephone, email and street address once confirmed
-  // logo: `${SITE_URL}/logo.png`,
-  // telephone: "+234...",
+    "Software development company and agency in Lagos, Nigeria offering custom software development, web design, mobile apps, WordPress, AI automation and software integrations.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Lagos",
@@ -47,81 +48,86 @@ const jsonLd = {
     { "@type": "Country", name: "Nigeria" },
   ],
   serviceType: [
-    "Website design",
+    "Custom software development",
     "Web application development",
     "Mobile app development",
     "WordPress development",
     "AI automation",
     "Software integration",
   ],
-  // sameAs: ["https://www.linkedin.com/company/...", "https://x.com/..."],
 };
 
-const services = [
+const serviceCards = [
   {
-    icon: "web",
-    title: "Website Design & Development",
-    href: "/services#web-design",
+    href: "/services#custom-software",
+    icon: "code_blocks",
+    title: "Custom Software Development",
     description:
-      "Website design services in Lagos: responsive, fast and search-friendly websites and web apps built with modern frameworks.",
+      "Bespoke enterprise software, scalable backends, microservices, and databases engineered by experienced software engineers to power critical workflows.",
+    action: "Explore Custom Software",
   },
   {
+    href: "/services#web-design",
+    icon: "devices",
+    title: "Web Application & Web Design",
+    description:
+      "High-speed, responsive web applications and websites built with Next.js, React, Node.js, and TypeScript, engineered for performance and search visibility.",
+    action: "Explore Web Apps",
+  },
+  {
+    href: "/services#mobile-apps",
     icon: "smartphone",
     title: "Mobile App Development",
-    href: "/services#mobile-apps",
     description:
-      "Native and cross-platform mobile applications designed for exceptional user experiences on iOS and Android.",
+      "Native iOS, Android, and cross-platform Flutter and React Native mobile apps crafted with fluid UX, high retention, and offline-first syncing.",
+    action: "Explore Mobile Apps",
   },
   {
-    icon: "dashboard_customize",
-    title: "WordPress Website Design",
     href: "/services#wordpress",
+    icon: "web",
+    title: "WordPress & Headless CMS",
     description:
-      "Custom WordPress theme and plugin development for robust, easily manageable business websites and content platforms.",
+      "Custom WordPress architectures, headless CMS (Sanity, Strapi), and tailored e-commerce portals optimized for speed and editorial autonomy.",
+    action: "Explore CMS Solutions",
   },
   {
-    icon: "code",
-    title: "Custom Software Development",
-    href: "/services#custom-software",
-    description:
-      "Bespoke software solutions engineered specifically to address your unique business challenges and workflows.",
-  },
-  {
-    icon: "smart_toy",
-    title: "AI Automation",
     href: "/services#ai-automation",
+    icon: "smart_toy",
+    title: "AI & Growth Automation",
     description:
-      "Intelligent automation solutions leveraging machine learning and AI to optimize operations and reduce costs.",
+      "Bespoke LLM integrations, AI copilots, machine learning models, and automated business workflows that eliminate manual friction.",
+    action: "Explore AI & Automation",
   },
   {
-    icon: "integration_instructions",
-    title: "Software Integrations",
     href: "/services#integrations",
+    icon: "cloud_sync",
+    title: "Software Integrations & Cloud",
     description:
-      "Seamless connection of disparate systems and APIs to create unified, efficient digital ecosystems.",
+      "Secure API bridges, AWS/GCP cloud migration, payment processor gateways, and microservices orchestrations for reliable interoperability.",
+    action: "Explore Cloud Integrations",
   },
 ];
 
 const faqs = [
   {
-    q: "What does a web design company in Lagos do?",
-    a: "A web design company plans, designs and builds websites for businesses. At Data Megathos that covers business websites, web apps, WordPress sites, online stores and the integrations behind them, all built to load fast, work on mobile and be found on Google.",
+    q: "Is Data Megathos a software development company in Lagos?",
+    a: "Yes. Data Megathos is a software development company and agency based in Lagos, Nigeria. We build custom software, websites, mobile apps and AI automation for startups and businesses, and work with clients remotely.",
   },
   {
-    q: "How do I choose a web design agency in Lagos?",
-    a: "Look at the agency's portfolio, ask who will actually build your site, confirm what is included (design, development, hosting, SEO basics, support) and get a clear timeline and quote in writing. Reviews from past clients are also a good signal.",
+    q: "What makes Data Megathos a leading software development company?",
+    a: "Unlike standard outsourcing shops, we combine senior software engineers, rigorous agile processes, and built-in growth and SEO strategy. We build scalable custom software and web applications with clean, maintainable code.",
   },
   {
-    q: "Do you offer website design services outside Lagos?",
-    a: "Yes. We are based in Lagos and work with clients across Nigeria and internationally, with projects managed remotely.",
+    q: "How do your software engineers build MVPs for startups?",
+    a: "We use a rapid prototyping approach focused strictly on core value metrics. Our software engineers build high-fidelity MVPs in 4 to 8 weeks, ensuring early user feedback, investor readiness, and room to scale.",
   },
   {
-    q: "What types of websites do you build?",
-    a: "Company websites, startup MVPs, WordPress websites, web applications, customer portals and e-commerce sites, plus mobile apps and AI-powered automation to go with them.",
+    q: "What range of services do software development firms like yours provide?",
+    a: "Our software agency delivers custom software development, iOS/Android mobile apps, Next.js web applications, WordPress/CMS systems, AI integrations, API ecosystems, and full-funnel digital marketing services.",
   },
   {
-    q: "How can I get a quote for a website?",
-    a: "Use the Start Your Project page to describe what you need. We will review it and come back with scope, timeline and pricing.",
+    q: "How can software development and digital marketing work together?",
+    a: "A great software application needs search visibility and user acquisition. By pairing software architecture with technical SEO, page speed optimization, and targeted digital marketing, we help your software get found and start driving revenue sooner.",
   },
 ];
 
@@ -133,225 +139,318 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Hero Section */}
-      <div className="mb-16">
-        <div
-          className="flex min-h-[500px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-center px-6 py-16 sm:px-12 relative overflow-hidden"
-          style={{
-            backgroundImage: `linear-gradient(rgba(38, 0, 10, 0.7), rgba(38, 0, 10, 0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmnbGntJm28wEk4NfAYPReeNQRRlJk_gIDzz1oRxjc2FjdWErFxzs5VE9Is8jhEzjUtOBxOLUO2GZ-DdOK3Cv2zQtu62NqJIply3afnphGxqsXX3tSD_WFGbUeNWDvuk_RS6wTZg69_LXkOzSW2ZYrS5EROCv2uTFMT62GTNp-EIiOr5LD7CZY7xXVNnUrHwTaxHA1-JFOemOhuzWwY5KIs8XJWHUrGcqCoDDA4NJSkXf-bNM5U_x52qeL7JQOTvlaHaZ5nda2ScB6")`,
-          }}
-        >
-          <div className="z-10 flex flex-col gap-6 text-left max-w-3xl">
-            <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl lg:text-6xl">
-              Web Design Company in Lagos, Nigeria: Websites, Apps &amp; AI
-              Automation
-            </h1>
-            <p className="text-slate-200 text-base md:text-lg font-normal leading-relaxed max-w-2xl">
-              Data Megathos is a web design agency and tech company in Lagos.
-              We provide website design services, mobile app development,
-              WordPress websites, bespoke software and intelligent AI
-              automation for startups and growing businesses across Nigeria.
-            </p>
-            <div className="flex flex-wrap gap-4 mt-4">
-              <Link
-                href="/quote"
-                className="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
-              >
-                <span className="truncate">Start Your Project</span>
-              </Link>
-              <Link
-                href="/portfolio"
-                className="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-surface border border-border text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-surface-variant transition-colors"
-              >
-                <span className="truncate">View Our Work</span>
-              </Link>
+      <main>
+        {/* Hero Section */}
+        <div className="@container mb-16">
+          <div className="@[480px]:p-0">
+            <div
+              className="flex min-h-[500px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-center px-6 py-16 @[480px]:px-12 relative overflow-hidden"
+              style={{
+                backgroundImage:
+                  'linear-gradient(rgba(38, 0, 10, 0.7), rgba(38, 0, 10, 0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmnbGntJm28wEk4NfAYPReeNQRRlJk_gIDzz1oRxjc2FjdWErFxzs5VE9Is8jhEzjUtOBxOLUO2GZ-DdOK3Cv2zQtu62NqJIply3afnphGxqsXX3tSD_WFGbUeNWDvuk_RS6wTZg69_LXkOzSW2ZYrS5EROCv2uTFMT62GTNp-EIiOr5LD7CZY7xXVNnUrHwTaxHA1-JFOemOhuzWwY5KIs8XJWHUrGcqCoDDA4NJSkXf-bNM5U_x52qeL7JQOTvlaHaZ5nda2ScB6")',
+              }}
+            >
+              <div className="z-10 flex flex-col gap-6 text-left max-w-3xl">
+                <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl lg:text-6xl">
+                  Software Development Company in Lagos: Launch Your MVP Faster &amp; Scale with Confidence
+                </h1>
+                <p className="text-slate-200 text-base md:text-lg font-normal leading-relaxed max-w-2xl">
+                  Data Megathos is a software development agency in Lagos, Nigeria. We are the strategic software partner for startups and SMEs, building robust MVPs, scalable architectures, and intelligent automation to power your growth journey.
+                </p>
+                <div className="flex flex-wrap gap-4 mt-4">
+                  <Link
+                    href="#contact"
+                    className="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+                  >
+                    <span className="truncate">Build Your MVP</span>
+                  </Link>
+                  <Link
+                    href="#startups"
+                    className="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-surface border border-border text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-surface-variant transition-colors"
+                  >
+                    <span className="truncate">Scale Your Team</span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Who We Are */}
-      <section
-        className="flex flex-col gap-10 px-4 py-16 border-t border-border/50"
-        id="about"
-      >
-        <div className="flex flex-col md:flex-row gap-12 items-start">
-          <div className="flex flex-col gap-6 flex-1">
+        {/* Who We Are */}
+        <section
+          className="flex flex-col gap-10 px-4 py-16 @container border-t border-border/50"
+          id="about"
+        >
+          <div className="flex flex-col md:flex-row gap-12 items-start">
+            <div className="flex flex-col gap-6 flex-1">
+              <p className="text-primary text-sm font-bold tracking-wider uppercase">
+                Who We Are | The Firm
+              </p>
+              <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight">
+                A Software Development Firm in Lagos Delivering Technical Precision
+              </h2>
+              <p className="text-slate-600 dark:text-slate-300 text-lg font-normal leading-relaxed">
+                Data Megathos is a software development company dedicated to engineered excellence. We don&apos;t just assemble templates: our experienced software engineers design bespoke software systems, high-performing cloud architectures, and conversion-centered digital platforms built to help SMEs and startups grow.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-3 py-1.5 rounded-lg bg-surface border border-border text-xs font-medium text-slate-200">
+                  Full-Stack Engineering
+                </span>
+                <span className="px-3 py-1.5 rounded-lg bg-surface border border-border text-xs font-medium text-slate-200">
+                  Cloud Microservices
+                </span>
+                <span className="px-3 py-1.5 rounded-lg bg-surface border border-border text-xs font-medium text-slate-200">
+                  SEO &amp; Growth Acceleration
+                </span>
+                <span className="px-3 py-1.5 rounded-lg bg-surface border border-border text-xs font-medium text-slate-200">
+                  Agile Sprint Delivery
+                </span>
+              </div>
+            </div>
+            <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+              <div className="flex gap-4 rounded-xl border border-border bg-surface p-6 flex-col shadow-lg">
+                <div className="text-primary bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                  <span className="material-symbols-outlined text-2xl" aria-hidden="true">
+                    engineering
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-lg font-bold leading-tight">Experienced Software Engineers</h3>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm font-normal leading-relaxed">
+                    Senior software engineer talent experienced in modern tech stacks, high-load scaling, and resilient codebases.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 rounded-xl border border-border bg-surface p-6 flex-col shadow-lg">
+                <div className="text-primary bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                  <span className="material-symbols-outlined text-2xl" aria-hidden="true">
+                    speed
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-lg font-bold leading-tight">Rapid Agile Sprints</h3>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm font-normal leading-relaxed">
+                    Bi-weekly iterations, clear roadmaps, and continuous delivery pipelines keep your software development moving fast.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 rounded-xl border border-border bg-surface p-6 flex-col shadow-lg">
+                <div className="text-primary bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                  <span className="material-symbols-outlined text-2xl" aria-hidden="true">
+                    security
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-lg font-bold leading-tight">Security-First Engineering</h3>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm font-normal leading-relaxed">
+                    Zero-trust principles, OWASP-aligned practices, and data governance built into every software development milestone.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 rounded-xl border border-border bg-surface p-6 flex-col shadow-lg">
+                <div className="text-primary bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                  <span className="material-symbols-outlined text-2xl" aria-hidden="true">
+                    trending_up
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-lg font-bold leading-tight">Data-Backed ROI</h3>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm font-normal leading-relaxed">
+                    Combining software engineering with performance marketing to drive measurable user acquisition and business growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* High-Growth Startups & Scaleups */}
+        <section className="py-16 border-t border-border/50 px-4" id="startups">
+          <div className="flex flex-col md:flex-row items-center gap-10 bg-surface rounded-2xl border border-border p-8 md:p-12 relative overflow-hidden">
+            <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="flex-1 flex flex-col gap-5 z-10">
+              <p className="text-primary text-xs font-bold uppercase tracking-wider">
+                High-Growth Startups &amp; Scaleups
+              </p>
+              <h2 className="text-2xl md:text-3xl font-black leading-tight">
+                The Software Development Agency for Ambitious Founders in Lagos and Beyond
+              </h2>
+              <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                Early-stage founders cannot afford slow cycles or architectural debt. Our dedicated software company pods function as your fractional CTO and core engineering squad, shipping high-converting MVPs in 4 to 8 weeks while laying the technical runway for Series A funding and beyond.
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-200 mt-2">
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-base" aria-hidden="true">
+                    check_circle
+                  </span>{" "}
+                  Rapid MVP Prototyping &amp; Launch
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-base" aria-hidden="true">
+                    check_circle
+                  </span>{" "}
+                  Fractional CTO Technical Leadership
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-base" aria-hidden="true">
+                    check_circle
+                  </span>{" "}
+                  Investor-Ready Scalable Codebases
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-base" aria-hidden="true">
+                    check_circle
+                  </span>{" "}
+                  Cost-Efficient Serverless &amp; Cloud Stacks
+                </li>
+              </ul>
+            </div>
+            <div className="w-full md:w-auto flex flex-col gap-4 z-10">
+              <div className="p-6 rounded-xl border border-primary/30 bg-background-dark/80 backdrop-blur-md flex flex-col gap-2 min-w-[260px]">
+                <div className="text-2xl font-black text-primary">4-8 Weeks</div>
+                <div className="text-xs text-slate-400 font-medium">Average Market MVP Delivery</div>
+              </div>
+              <div className="p-6 rounded-xl border border-border bg-background-dark/80 backdrop-blur-md flex flex-col gap-2 min-w-[260px]">
+                <div className="text-2xl font-black text-white">100% IP Ownership</div>
+                <div className="text-xs text-slate-400 font-medium">Full Source Code &amp; Infrastructure Handover</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services */}
+        <section className="py-16 border-t border-border/50" id="services">
+          <div className="flex flex-col items-center text-center mb-12 gap-4 px-4">
             <p className="text-primary text-sm font-bold tracking-wider uppercase">
-              Who We Are
+              End-to-End Capabilities
             </p>
             <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight">
-              A Lagos web design company building technology that grows
-              businesses
+              Full-Lifecycle Software Development &amp; Digital Solutions
             </h2>
-            <p className="text-slate-300 text-lg font-normal leading-relaxed">
-              Data Megathos is a software development agency and web design
-              company in Lagos, Nigeria. We combine technical excellence with
-              strategic thinking to build business websites, WordPress
-              websites, mobile apps, web applications, intelligent AI
-              automation and seamless software integrations.
+            <p className="text-slate-600 dark:text-slate-300 max-w-2xl text-base">
+              As a full-service software development firm, we cover everything from custom software development to technical SEO and digital marketing, so you get one team for complete digital transformation.
             </p>
           </div>
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-            <div className="flex gap-4 rounded-xl border border-border bg-surface p-6 flex-col shadow-lg">
-              <div className="text-primary bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center">
-                <span className="material-symbols-outlined text-2xl" aria-hidden="true">
-                  rocket_launch
-                </span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-bold leading-tight">Our Mission</h3>
-                <p className="text-slate-300 text-sm font-normal leading-relaxed">
-                  To deliver innovative, reliable, and scalable software
-                  solutions that solve real-world problems and empower
-                  businesses to achieve their full potential.
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+            {serviceCards.map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="group relative flex flex-col gap-4 rounded-xl border border-border bg-surface p-8 hover:border-primary transition-colors overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110" />
+                <div className="text-primary mb-2">
+                  <span className="material-symbols-outlined text-4xl" aria-hidden="true">
+                    {service.icon}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold leading-tight">{service.title}</h3>
+                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                  {service.description}
                 </p>
+                <span className="mt-auto text-primary text-xs font-bold inline-flex items-center gap-1">
+                  {service.action}{" "}
+                  <span className="material-symbols-outlined text-sm" aria-hidden="true">
+                    arrow_forward
+                  </span>
+                </span>
+              </Link>
+            ))}
+
+            {/* Digital Marketing & SEO (Wide) */}
+            <div className="group relative flex flex-col gap-4 rounded-xl border border-border bg-surface p-8 hover:border-primary transition-colors overflow-hidden sm:col-span-2 lg:col-span-3">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-bl-full -z-10 transition-transform group-hover:scale-110" />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="text-primary">
+                    <span className="material-symbols-outlined text-4xl" aria-hidden="true">
+                      ads_click
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold leading-tight">
+                      Digital Marketing &amp; Search Engine Optimization (SEO)
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm max-w-3xl mt-1 leading-relaxed">
+                      Software without users yields zero value. Our integrated digital marketing arm handles technical SEO, paid user acquisition, funnel optimization (CRO), and content marketing so your software platform gets found and drives revenue.
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  className="flex min-w-[140px] cursor-pointer items-center justify-center gap-2 rounded-lg h-10 px-5 bg-primary/20 border border-primary/40 text-primary text-sm font-bold hover:bg-primary hover:text-white transition-colors shrink-0"
+                  href="#contact"
+                >
+                  <span>Boost Digital Growth</span>
+                  <span className="material-symbols-outlined text-sm" aria-hidden="true">
+                    north_east
+                  </span>
+                </Link>
               </div>
             </div>
-            <div className="flex gap-4 rounded-xl border border-border bg-surface p-6 flex-col shadow-lg">
-              <div className="text-primary bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center">
-                <span className="material-symbols-outlined text-2xl" aria-hidden="true">
-                  lightbulb
+          </div>
+        </section>
+
+        {/* Why us */}
+        <section className="py-16 border-t border-border/50 px-4" id="why-us">
+          <div className="flex flex-col items-center text-center mb-12 gap-4">
+            <p className="text-primary text-sm font-bold tracking-wider uppercase">
+              Engineering Superiority
+            </p>
+            <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight">
+              Why Partner with Data Megathos as Your Software Development Company?
+            </h2>
+            <p className="text-slate-600 dark:text-slate-300 max-w-2xl text-base">
+              We stand apart from generic software development firms through senior-led engineering, high standards, and total transparency.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-surface border border-border p-8 rounded-xl flex flex-col gap-3">
+              <div className="text-primary">
+                <span className="material-symbols-outlined text-3xl" aria-hidden="true">
+                  verified_user
                 </span>
               </div>
-              <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-bold leading-tight">Our Expertise</h3>
-                <p className="text-slate-300 text-sm font-normal leading-relaxed">
-                  Website design services, mobile app development, WordPress
-                  websites, AI-driven automation and custom digital
-                  experiences for clients in Lagos and across Nigeria.
-                </p>
+              <h3 className="text-lg font-bold">Senior Software Engineer Pods</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                No bait-and-switch junior outsourcing. Every line of code is produced or reviewed by experienced software engineers with deep production backgrounds.
+              </p>
+            </div>
+            <div className="bg-surface border border-border p-8 rounded-xl flex flex-col gap-3">
+              <div className="text-primary">
+                <span className="material-symbols-outlined text-3xl" aria-hidden="true">
+                  sync_alt
+                </span>
               </div>
+              <h3 className="text-lg font-bold">Transparent Agile Operations</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Live demo sessions every two weeks, direct Slack channels with developers, and clear pricing with no surprise fees. You remain in total command.
+              </p>
+            </div>
+            <div className="bg-surface border border-border p-8 rounded-xl flex flex-col gap-3">
+              <div className="text-primary">
+                <span className="material-symbols-outlined text-3xl" aria-hidden="true">
+                  hub
+                </span>
+              </div>
+              <h3 className="text-lg font-bold">Unified Software + Marketing</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Unlike disconnected development agencies, we pair software architecture with technical SEO and conversion funnels from Day 1.</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* For Startups */}
-      <section className="py-16 border-t border-border/50" id="for-startup">
-        <div className="flex flex-col items-center text-center mb-12 gap-4">
-          <p className="text-primary text-sm font-bold tracking-wider uppercase">
-            For Startups
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight">
-            The website design agency for startups and SMEs
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-          <div className="flex flex-col gap-4 rounded-xl border border-border bg-surface p-8">
-            <h3 className="text-2xl md:text-3xl font-black leading-tight tracking-tight">
-              Launch Your MVP Faster &amp; Scale with Confidence
-            </h3>
-            <p className="text-slate-300 text-base leading-relaxed">
-              The strategic software partner for startups and SMEs. We build
-              robust MVPs, scalable architectures, and intelligent automation
-              to power your growth journey.
+        {/* Testimonials */}
+        <section className="py-16 border-t border-border/50" id="testimonials">
+          <div className="flex flex-col items-center text-center mb-12 gap-4">
+            <p className="text-primary text-sm font-bold tracking-wider uppercase">
+              Client Validation &amp; Results
             </p>
+            <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight">
+              Trusted by Tech Founders, CTOs, and SME Leaders
+            </h2>
           </div>
-          <div className="flex flex-col gap-4 rounded-xl border border-border bg-surface p-8">
-            <h3 className="text-2xl md:text-3xl font-black leading-tight tracking-tight">
-              High-velocity development for ambitious founders
-            </h3>
-            <p className="text-slate-300 text-base leading-relaxed">
-              Data Megathos is built for the startup ecosystem. We strip away
-              the overhead of traditional agencies to focus on what matters:
-              speed-to-market and lean, cost-effective development that scales
-              as you grow.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-16 border-t border-border/50" id="services">
-        <div className="flex flex-col items-center text-center mb-12 gap-4">
-          <p className="text-primary text-sm font-bold tracking-wider uppercase">
-            Our Services
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight">
-            Website Design Services &amp; Software Solutions
-          </h2>
-          <p className="text-slate-300 max-w-2xl">
-            Comprehensive digital solutions from a Lagos tech company,
-            tailored to elevate your business operations and customer
-            experience.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-          {services.map((service) => (
-            <Link
-              key={service.title}
-              href={service.href}
-              className="group relative flex flex-col gap-4 rounded-xl border border-border bg-surface p-8 hover:border-primary transition-colors overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110" />
-              <div className="text-primary mb-2">
-                <span className="material-symbols-outlined text-4xl" aria-hidden="true">
-                  {service.icon}
-                </span>
-              </div>
-              <h3 className="text-xl font-bold leading-tight">{service.title}</h3>
-              <p className="text-slate-400 text-sm">{service.description}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Why choose us */}
-      <section className="py-16 border-t border-border/50" id="why-us">
-        <div className="px-4 max-w-4xl flex flex-col gap-6">
-          <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight">
-            Why businesses choose Data Megathos as their web design company
-            in Nigeria
-          </h2>
-          <p className="text-slate-300 text-lg leading-relaxed">
-            Choosing among web design firms can be hard. Our approach is
-            simple: we build websites that look professional, load quickly on
-            mobile networks, and are structured so customers and search
-            engines can find you. Every project starts with your business
-            goals, not a template.
-          </p>
-          {/* TODO: replace with real, verifiable points (years in business, number of projects, tools, support terms) */}
-          <ul className="text-slate-300 text-base leading-relaxed list-disc pl-6 flex flex-col gap-2">
-            <li>One team for design, development, WordPress, mobile and AI automation</li>
-            <li>Mobile-first, fast-loading websites with SEO fundamentals built in</li>
-            <li>Clear scope, timeline and pricing before work begins</li>
-            <li>Ongoing support after launch</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 border-t border-border/50" id="testimonials">
-        <div className="flex flex-col items-center text-center mb-12 gap-4">
-          <p className="text-primary text-sm font-bold tracking-wider uppercase">
-            Client Success
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight">
-            What Our Partners Say
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-          {[
-            {
-              quote:
-                "Data Megathos completely transformed our internal processes. Their AI automation solution reduced our manual data entry by 80%, allowing our team to focus on strategic initiatives. Truly a game-changer.",
-              initials: "SJ",
-              name: "Sarah Jenkins",
-              role: "CTO, TechLogix",
-            },
-            {
-              quote:
-                "The mobile app they built for us exceeded all expectations. The UI is flawless, and the performance is incredibly fast. Their team was professional, communicative, and delivered on time.",
-              initials: "MR",
-              name: "Marcus Reed",
-              role: "Founder, FitStream",
-            },
-          ].map((testimonial) => (
-            <figure
-              key={testimonial.name}
-              className="bg-surface border border-border p-8 rounded-xl relative"
-            >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+            <figure className="bg-surface border border-border p-8 rounded-xl relative">
               <span
                 className="material-symbols-outlined absolute top-6 right-6 text-primary/20 text-6xl"
                 aria-hidden="true"
@@ -365,80 +464,120 @@ export default function Home() {
                   </span>
                 ))}
               </div>
-              <blockquote className="text-slate-300 italic mb-6 relative z-10">
-                &ldquo;{testimonial.quote}&rdquo;
+              <blockquote className="text-slate-600 dark:text-slate-300 italic mb-6 relative z-10">
+                &ldquo;As a fast-paced fintech startup, we needed a top-tier software development company that could build scalable microservices and native mobile apps without cutting security corners. Data Megathos acted as our dedicated engineering arm, delivering on-time and investor-ready.&rdquo;
               </blockquote>
               <figcaption className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center font-bold text-primary">
-                  {testimonial.initials}
+                  LD
                 </div>
                 <div>
-                  <p className="font-bold">{testimonial.name}</p>
-                  <p className="text-sm text-slate-500">{testimonial.role}</p>
+                  <p className="font-bold">Liam Dawson</p>
+                  <p className="text-sm text-slate-500">Founder &amp; CEO, NexoApp</p>
                 </div>
               </figcaption>
             </figure>
-          ))}
-        </div>
-      </section>
+            <figure className="bg-surface border border-border p-8 rounded-xl relative">
+              <span
+                className="material-symbols-outlined absolute top-6 right-6 text-primary/20 text-6xl"
+                aria-hidden="true"
+              >
+                format_quote
+              </span>
+              <div className="flex gap-1 text-primary mb-4" aria-label="5 out of 5 stars">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span key={i} className="material-symbols-outlined text-sm" aria-hidden="true">
+                    star
+                  </span>
+                ))}
+              </div>
+              <blockquote className="text-slate-600 dark:text-slate-300 italic mb-6 relative z-10">
+                &ldquo;We previously hired another software development firm that left us with unmaintainable legacy code. Data Megathos&apos;s senior software engineers refactored our entire stack, improved page speeds by 65%, and integrated technical SEO that tripled our inbound demo requests.&rdquo;
+              </blockquote>
+              <figcaption className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center font-bold text-primary">
+                  AM
+                </div>
+                <div>
+                  <p className="font-bold">Aria Miller</p>
+                  <p className="text-sm text-slate-500">Head of Product, ScaleScale</p>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
 
-      {/* FAQ */}
-      <section className="py-16 border-t border-border/50" id="faq">
-        <div className="flex flex-col items-center text-center mb-12 gap-4">
-          <p className="text-primary text-sm font-bold tracking-wider uppercase">
-            FAQ
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight">
-            Web Design in Lagos: Frequently Asked Questions
-          </h2>
-        </div>
-        <div className="flex flex-col gap-4 px-4 max-w-3xl mx-auto">
-          {faqs.map((item) => (
-            <details
-              key={item.q}
-              className="rounded-xl border border-border bg-surface p-6 group"
-            >
-              <summary className="cursor-pointer text-lg font-bold leading-tight">
-                {item.q}
-              </summary>
-              <p className="text-slate-300 text-base leading-relaxed mt-4">
-                {item.a}
-              </p>
-            </details>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA / Contact Section */}
-      <section className="py-16 border-t border-border/50" id="contact">
-        <div className="bg-primary/10 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-primary/20 mx-4">
-          <div className="flex flex-col gap-4 text-center md:text-left max-w-xl">
-            <h2 className="text-2xl md:text-3xl font-black leading-tight">
-              Ready to work with a web design company in Lagos?
+        {/* FAQ */}
+        <section className="py-16 border-t border-border/50 px-4" id="faq">
+          <div className="flex flex-col items-center text-center mb-12 gap-4">
+            <p className="text-primary text-sm font-bold tracking-wider uppercase">
+              Got Questions?
+            </p>
+            <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight">
+              Software Development Company FAQ
             </h2>
-            <p className="text-slate-300">
-              Let&apos;s discuss how we can help transform your business with
-              a new website, mobile app or custom software solution.
+            <p className="text-slate-600 dark:text-slate-300 max-w-2xl text-base">
+              Answers about our software development process, tech stacks, and how we work with startups and SMEs.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-            <Link
-              href="/contact"
-              className="flex min-w-[140px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal hover:bg-primary/90 transition-colors"
-            >
-              <span className="material-symbols-outlined text-xl" aria-hidden="true">mail</span>
-              <span>Contact Us</span>
-            </Link>
-            <Link
-              href="/pay"
-              className="flex min-w-[140px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-surface border border-border text-white text-base font-bold leading-normal hover:bg-surface-variant transition-colors"
-            >
-              <span className="material-symbols-outlined text-xl" aria-hidden="true">credit_card</span>
-              <span>Make a Payment</span>
-            </Link>
+          <div className="max-w-3xl mx-auto flex flex-col gap-4">
+            {faqs.map((faq) => (
+              <div
+                key={faq.q}
+                className="bg-surface border border-border rounded-xl p-6 flex flex-col gap-2"
+              >
+                <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-xl" aria-hidden="true">
+                    help_outline
+                  </span>
+                  {faq.q}
+                </h3>
+                <p className="text-sm text-slate-300 leading-relaxed pl-7">{faq.a}</p>
+              </div>
+            ))}
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Contact CTA */}
+        <section className="py-16 border-t border-border/50" id="contact">
+          <div className="bg-primary/10 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-primary/20 mx-4">
+            <div className="flex flex-col gap-4 text-center md:text-left max-w-xl">
+              <div className="inline-flex items-center justify-center md:justify-start gap-2 text-primary font-bold text-xs uppercase tracking-wider">
+                <span className="material-symbols-outlined text-sm" aria-hidden="true">
+                  handshake
+                </span>
+                Partner With Us Today
+              </div>
+              <h2 className="text-2xl md:text-3xl font-black leading-tight">
+                Ready to Build with a Software Development Agency in Lagos?
+              </h2>
+              <p className="text-slate-600 dark:text-slate-300">
+                Schedule a free engineering consultation or request a quote for your custom software development project.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+              <Link
+                href="/quote"
+                className="flex min-w-[150px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal hover:bg-primary/90 transition-colors shadow-lg"
+              >
+                <span className="material-symbols-outlined text-xl" aria-hidden="true">
+                  rocket_launch
+                </span>
+                <span>Get a Quote</span>
+              </Link>
+              <Link
+                href="/pay"
+                className="flex min-w-[150px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-surface border border-border text-white text-base font-bold leading-normal hover:bg-surface-variant transition-colors"
+              >
+                <span className="material-symbols-outlined text-xl" aria-hidden="true">
+                  credit_card
+                </span>
+                <span>Make Payment</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
 }

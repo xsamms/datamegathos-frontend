@@ -101,11 +101,11 @@ export async function GET(req: Request) {
     const commentMap = new Map<number, CommentWithReplies>();
     const rootComments: CommentWithReplies[] = [];
 
-    comments.forEach((c) => {
+    comments.forEach((c: any) => {
       commentMap.set(c.id, { ...c, replies: [] });
     });
 
-    comments.forEach((c) => {
+    comments.forEach((c: any) => {
       const commentWithReplies = commentMap.get(c.id)!;
       if (c.parentId) {
         const parent = commentMap.get(c.parentId);
