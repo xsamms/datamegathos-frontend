@@ -6,18 +6,21 @@ import Link from "next/link";
 
 const projectTypes = [
   { value: "mobile", label: "Mobile App" },
-  { value: "web", label: "Web App" },
+  { value: "website", label: "Custom Website" },
   { value: "ai", label: "AI Automation" },
-  { value: "wordpress", label: "WordPress" },
-  { value: "custom", label: "Custom Software" },
+  { value: "wordpress", label: "WordPress Website" },
+  { value: "software", label: "Software Development" },
   { value: "integration", label: "Integration" },
+  { value: "social-media", label: "Social Media Management" },
+  { value: "seo", label: "SEO" },
+  { value: "google-ads", label: "Google Ads" },
 ];
 
 const budgetOptions = [
-  { value: "<10k", label: "< $10k" },
-  { value: "10k-25k", label: "$10k - $25k" },
-  { value: "25k-50k", label: "$25k - $50k" },
-  { value: "50k+", label: "$50k+" },
+  { value: "<200k", label: "< ₦200k" },
+  { value: "200k-400k", label: "₦200k - ₦400k" },
+  { value: "500k-900k", label: "₦500k - ₦900k" },
+  { value: "1m+", label: "₦1M+" },
 ];
 
 const countryCodes = [
@@ -119,7 +122,7 @@ export function QuoteForm() {
           Your quote request has been sent successfully! We will get back to you shortly.
         </div>
       )}
-      
+
       {errors.form && (
         <div className="p-4 bg-primary/20 text-primary border border-primary rounded-lg mb-2">
           {errors.form}
@@ -193,7 +196,7 @@ export function QuoteForm() {
               className="input h-12 w-[110px] pr-8 appearance-none cursor-pointer"
               id="quoteCountryCode"
               name="countryCode"
-              defaultValue="+1"
+              defaultValue="+234"
               aria-label="Country code"
             >
               {countryCodes.map((country) => (
@@ -301,7 +304,7 @@ export function QuoteForm() {
         type="submit"
         disabled={loading}
       >
-        <span>{loading ? "Sending..." : "Request Quote"}</span>
+        <span>{loading ? "Sending..." : "Submit Request"}</span>
         {!loading && (
           <span className="material-symbols-outlined text-xl">
             arrow_forward

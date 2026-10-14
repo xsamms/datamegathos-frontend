@@ -516,7 +516,7 @@ export default function WebDesignLagosPage() {
                 <span className="material-symbols-outlined text-xl" aria-hidden="true">
                   rocket_launch
                 </span>
-                <span>Get a Free Quote</span>
+                <span>Get a Quote</span>
               </Link>
               <a
                 href="https://wa.me/2349068954455"
