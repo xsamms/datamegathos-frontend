@@ -17,24 +17,31 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Old -lagos paths redirect to new clean paths
       {
-        source: '/digital-marketing',
-        destination: '/digital-marketing-lagos',
+        source: '/web-design-lagos',
+        destination: '/web-design',
         permanent: true,
       },
       {
-        source: '/services/digital-marketing',
-        destination: '/digital-marketing-lagos',
+        source: '/digital-marketing-lagos',
+        destination: '/digital-marketing',
         permanent: true,
       },
+      // Legacy aliases
       {
         source: '/website',
-        destination: '/web-design-lagos',
+        destination: '/web-design',
         permanent: true,
       },
       {
         source: '/services/web-design-lagos',
-        destination: '/web-design-lagos',
+        destination: '/web-design',
+        permanent: true,
+      },
+      {
+        source: '/services/digital-marketing',
+        destination: '/digital-marketing',
         permanent: true,
       },
       {

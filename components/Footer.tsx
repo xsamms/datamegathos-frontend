@@ -17,8 +17,8 @@ export function Footer() {
             <h2 className="text-lg font-bold leading-tight">Data Megathos</h2>
           </Link>
           <p className="text-sm text-slate-400">
-            Engineering the future of digital products for startups and SMEs
-            worldwide.
+            Engineering the future of digital products for startups and SMEs in Lagos, Nigeria, Africa and
+            Worldwide.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-10">

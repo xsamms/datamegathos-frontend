@@ -26,6 +26,7 @@ const services = [
     icon: "web",
     title: "Website Design & Development",
     tag: "For Businesses & SMEs",
+    href: "/web-design",
     description:
       "Professional website design services in Lagos for companies that want a fast, modern site that wins customers. We design and build business websites, landing pages and redesigns that look sharp on every device and are structured to rank on Google.",
     features: [
@@ -39,6 +40,7 @@ const services = [
     icon: "smartphone",
     title: "Mobile App Development",
     tag: "For Startups",
+    href: "/mobile-app-development",
     description:
       "Turn your vision into a market-ready product. We prioritize speed-to-market with high-performance MVP development for iOS and Android, ensuring your startup can scale rapidly as your user base grows.",
     features: [
@@ -52,6 +54,7 @@ const services = [
     icon: "campaign",
     title: "Digital Marketing & SEO",
     tag: "Growth & Acquisition",
+    href: "/digital-marketing",
     description:
       "Turn clicks into measurable revenue. We combine technical SEO, Google Ads, and targeted social media marketing with conversion rate optimization to drive customer acquisition for businesses in Lagos and across Nigeria.",
     features: [
@@ -65,6 +68,7 @@ const services = [
     icon: "language",
     title: "Web Application Engineering",
     tag: "For Startups",
+    href: "/web-design",
     description:
       "Bespoke SaaS and web platforms built for performance. We focus on modern architectures that support rapid iteration and massive scalability, helping startups maintain a competitive edge.",
     features: [
@@ -78,6 +82,7 @@ const services = [
     icon: "desktop_windows",
     title: "WordPress Website Design",
     tag: "For SMEs",
+    href: "/web-design",
     description:
       "Professional, SEO-optimized web presence designed for business growth. We deliver customized WordPress websites that are easy for your team to manage while maintaining premium aesthetics.",
     features: [
@@ -91,6 +96,7 @@ const services = [
     icon: "code_blocks",
     title: "Custom Software Development",
     tag: "Bespoke Engineering",
+    href: "/services#custom-software",
     description:
       "Unique business challenges require tailored software. We engineer complex internal tools, proprietary algorithms, and enterprise-grade systems from the ground up for total control.",
     features: [
@@ -104,6 +110,7 @@ const services = [
     icon: "psychology",
     title: "AI & Workflow Automation",
     tag: "Startups & SMEs",
+    href: "/services#ai-automation",
     description:
       "Maximize efficiency and reduce overhead. We implement intelligent AI agents and automated workflows that handle repetitive tasks, allowing your team to focus on high-value strategic goals.",
     features: [
@@ -117,6 +124,7 @@ const services = [
     icon: "hub",
     title: "Software Integration",
     tag: "Startups & SMEs",
+    href: "/services#integrations",
     description:
       "Eliminate data silos by connecting your tech stack. We modernize workflows by ensuring your CRM, ERP, and internal tools communicate flawlessly through robust API development.",
     features: [
@@ -208,36 +216,47 @@ export default function ServicesPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 lg:px-0 lg:py-10">
         {services.map((service) => (
-          <article
+          <Link
             key={service.title}
-            id={service.id}
-            className="flex flex-col gap-6 p-8 rounded-2xl bg-surface-container border border-primary/10 hover:border-primary/40 transition-all group scroll-mt-24"
+            href={service.href}
+            className="block"
           >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-              <span className="material-symbols-outlined text-3xl" aria-hidden="true">
-                {service.icon}
+            <article
+              id={service.id}
+              className="flex flex-col gap-6 p-8 rounded-2xl bg-surface-container border border-primary/10 hover:border-primary/40 transition-all group scroll-mt-24 h-full"
+            >
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                <span className="material-symbols-outlined text-3xl" aria-hidden="true">
+                  {service.icon}
+                </span>
+              </div>
+              <div className="flex flex-col gap-3">
+                <h3 className="text-2xl font-bold">{service.title}</h3>
+                <p className="text-sm font-medium text-primary uppercase tracking-wider">
+                  {service.tag}
+                </p>
+                <p className="text-slate-400 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+              <ul className="space-y-2 text-sm text-slate-300">
+                {service.features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-xs" aria-hidden="true">
+                      check_circle
+                    </span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <span className="inline-flex items-center gap-1 text-primary text-sm font-bold mt-auto group-hover:underline">
+                Learn more
+                <span className="material-symbols-outlined text-sm" aria-hidden="true">
+                  arrow_forward
+                </span>
               </span>
-            </div>
-            <div className="flex flex-col gap-3">
-              <h3 className="text-2xl font-bold">{service.title}</h3>
-              <p className="text-sm font-medium text-primary uppercase tracking-wider">
-                {service.tag}
-              </p>
-              <p className="text-slate-400 leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-            <ul className="space-y-2 text-sm text-slate-300">
-              {service.features.map((feature) => (
-                <li key={feature} className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary text-xs" aria-hidden="true">
-                    check_circle
-                  </span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </article>
+            </article>
+          </Link>
         ))}
       </div>
 

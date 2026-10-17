@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Data Megathos is a website design company and web design agency in Lagos, Nigeria. Business websites, WordPress, e-commerce and web apps for startups and SMEs. Get a free quote.",
   alternates: {
-    canonical: `${SITE_URL}/web-design-lagos`,
+    canonical: `${SITE_URL}/web-design`,
   },
   robots: {
     index: true,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Website Design Company in Lagos, Nigeria | Data Megathos",
     description:
       "Web design agency in Lagos building business websites, WordPress sites, e-commerce stores and web apps for startups and SMEs.",
-    url: `${SITE_URL}/web-design-lagos`,
+    url: `${SITE_URL}/web-design`,
     locale: "en_NG",
   },
   twitter: {

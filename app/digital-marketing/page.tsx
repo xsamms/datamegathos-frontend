@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Digital marketing agency in Lagos, Nigeria offering SEO, Google Ads and social media marketing services for startups and SMEs. Request a free growth audit.",
   alternates: {
-    canonical: `${SITE_URL}/digital-marketing-lagos`,
+    canonical: `${SITE_URL}/digital-marketing`,
   },
   robots: {
     index: true,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Digital Marketing Agency in Lagos, Nigeria | Data Megathos",
     description:
       "SEO company, Google Ads agency and social media marketing agency in Lagos, Nigeria for startups and SMEs.",
-    url: `${SITE_URL}/digital-marketing-lagos`,
+    url: `${SITE_URL}/digital-marketing`,
     locale: "en_NG",
   },
   twitter: {
