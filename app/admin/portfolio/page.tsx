@@ -4,58 +4,10 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useAuth } from "@/lib/useAuth";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { usePortfolioItems, useDeletePortfolio, PortfolioItem } from "@/lib/hooks";
 import { formatDate } from "@/lib/utils";
 import { AdminSidebar } from "@/components/AdminSidebar";
 import { AdminNav } from "@/components/AdminNav";
-
-interface PortfolioItem {
-  id: number;
-  title: string;
-  slug: string;
-  description: string;
-  client?: string;
-  category: string;
-  techs?: string;
-  image: string;
-  liveUrl?: string;
-  featured: boolean;
-  published: boolean;
-  createdAt: string;
-  updatedAt: string;
-}
-
-function usePortfolioAdmin(limit = 20, page = 1) {
-  return useQuery({
-    queryKey: ["portfolio-admin", { limit, page }],
-    queryFn: async () => {
-      const params = new URLSearchParams({
-        limit: limit.toString(),
-        page: page.toString(),
-        published: "false", // Fetch all (including unpublished)
-      });
-      const response = await fetch(`/api/portfolio?${params}`);
-      if (!response.ok) throw new Error("Failed to fetch portfolio items");
-      return response.json();
-    },
-  });
-}
-
-function useDeletePortfolio() {
-  const queryClient = useQueryClient();
-  return useMutation({
-    mutationFn: async (slug: string) => {
-      const response = await fetch(`/api/portfolio/${slug}`, {
-        method: "DELETE",
-      });
-      if (!response.ok) throw new Error("Failed to delete portfolio item");
-      return response.json();
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["portfolio-admin"] });
-    },
-  });
-}
 
 export default function AdminPortfolioPage() {
   const router = useRouter();
@@ -64,7 +16,8 @@ export default function AdminPortfolioPage() {
 
   const [page, setPage] = useState(1);
   const limit = 20;
-  const { data, isLoading } = usePortfolioAdmin(limit, page);
+  // Fetch all portfolio items (including unpublished) for admin view
+  const { data, isLoading } = usePortfolioItems(undefined, undefined, limit, page);
 
   const items: PortfolioItem[] = data?.data || [];
   const pagination = data?.pagination || {};
@@ -116,16 +69,15 @@ export default function AdminPortfolioPage() {
                   Manage your portfolio projects and case studies.
                 </p>
               </div>
-              <button
-                disabled
-                className="bg-[var(--primary-container)] text-white px-5 py-3 font-bold text-sm uppercase tracking-widest opacity-50 flex items-center gap-2 self-start cursor-not-allowed"
-                title="Create from the Portfolio API"
+              <Link
+                href="/admin/portfolio/create"
+                className="bg-[var(--primary-container)] text-white px-5 py-3 font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-all active:scale-95 flex items-center gap-2 self-start"
               >
                 <span className="material-symbols-outlined text-[18px]">
                   add
                 </span>
                 New Project
-              </button>
+              </Link>
             </div>
 
             {/* Stats Row */}
@@ -189,9 +141,12 @@ export default function AdminPortfolioPage() {
                 <p className="text-[var(--outline)] mb-2">
                   No portfolio projects yet.
                 </p>
-                <p className="text-xs text-[var(--outline-variant)]">
-                  Create portfolio items via the API.
-                </p>
+                <Link
+                  href="/admin/portfolio/create"
+                  className="text-[var(--primary-container)] text-sm font-bold hover:underline"
+                >
+                  Create your first project →
+                </Link>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
