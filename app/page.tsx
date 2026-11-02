@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { WelcomeVideo } from "@/components/WelcomeVideo";
 
 const SITE_URL = "https://www.datamegathos.com";
 
@@ -175,6 +176,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Welcome Video Section */}
+        <WelcomeVideo />
 
         {/* Who We Are */}
         <section
