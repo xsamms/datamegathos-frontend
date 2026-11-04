@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const SITE_URL = "https://datamegathos.com";
+const SITE_URL = "https://www.datamegathos.com";
 
 export const metadata: Metadata = {
   title: "Website Design Company in Lagos, Nigeria | Data Megathos",
@@ -35,7 +35,7 @@ const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Data Megathos",
-  url: "https://datamegathos.com/",
+  url: "https://www.datamegathos.com/",
   description:
     "Website design company and web design agency in Lagos, Nigeria offering business website design, WordPress website design, e-commerce websites and web application development.",
   address: {

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Request a Quote - Data Megathos",
   description:
     "Get a detailed proposal for your next software project. Mobile apps, web platforms, AI automation, WordPress, and custom development solutions.",
+  alternates: {
+    canonical: "https://www.datamegathos.com/quote",
+  },
 };
 
 const valueProps = [

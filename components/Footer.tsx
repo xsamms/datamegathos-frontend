@@ -38,12 +38,12 @@ export function Footer() {
             >
               Contact
             </Link>
-            <a
+            <Link
               className="text-sm text-slate-400 hover:text-white transition-colors"
               href="/portfolio"
             >
               Portfolio
-            </a>
+            </Link>
             <Link
               className="text-sm text-slate-400 hover:text-white transition-colors"
               href="/careers"
@@ -57,27 +57,27 @@ export function Footer() {
             </h4>
             <Link
               className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="/services"
+              href="/web-design"
+            >
+              Web Design
+            </Link>
+            <Link
+              className="text-sm text-slate-400 hover:text-white transition-colors"
+              href="/mobile-app-development"
             >
               Mobile App Development
             </Link>
             <Link
               className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="/services"
+              href="/digital-marketing"
+            >
+              Digital Marketing
+            </Link>
+            <Link
+              className="text-sm text-slate-400 hover:text-white transition-colors"
+              href="/services#ai-automation"
             >
               AI &amp; Automation
-            </Link>
-            <Link
-              className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="/services"
-            >
-              WordPress Website
-            </Link>
-            <Link
-              className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="/services"
-            >
-              Custom Software
             </Link>
           </div>
           <div className="flex flex-col gap-4">
@@ -86,25 +86,33 @@ export function Footer() {
             </h4>
             <a
               className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="https://www.facebook.com/datamegathos" target="_blank"
+              href="https://www.facebook.com/datamegathos"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Facebook
             </a>
             <a
               className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="https://www.linkedin.com/company/data-megathos" target="_blank"
+              href="https://www.linkedin.com/company/data-megathos"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               LinkedIn
             </a>
             <a
               className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="https://www.x.com/datamegathos" target="_blank"
+              href="https://www.x.com/datamegathos"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               X (Twitter)
             </a>
             <a
               className="text-sm text-slate-400 hover:text-white transition-colors"
-              href="https://www.instagram.com/datamegathos" target="_blank"
+              href="https://www.instagram.com/datamegathos"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Instagram
             </a>
@@ -114,9 +122,9 @@ export function Footer() {
       <div className="pt-8 mt-8 border-t border-primary/10 flex flex-wrap justify-between items-center text-xs text-slate-500 gap-4">
         <p>© 2026 Data Megathos. All Rights Reserved. Software Development Company &amp; Digital Agency in Lagos, Nigeria.</p>
         <div className="flex gap-6">
-          <a className="hover:text-white transition-colors" href="/privacy-policy">
+          <Link className="hover:text-white transition-colors" href="/privacy-policy">
             Privacy Policy
-          </a>
+          </Link>
           <Link className="hover:text-white transition-colors" href="/terms-of-service">
             Terms of Service
           </Link>

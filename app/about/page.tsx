@@ -1,5 +1,24 @@
 
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Software Development Team in Lagos | Data Megathos",
+  description:
+    "Learn about Data Megathos, our team, mission, and engineering standards. We build high-performance web applications, mobile apps, and custom software for startups and SMEs.",
+  alternates: {
+    canonical: "https://www.datamegathos.com/about",
+  },
+  openGraph: {
+    title: "About Us | Software Development Team in Lagos | Data Megathos",
+    description:
+      "Learn about Data Megathos, our team, mission, and engineering standards. We build high-performance web applications, mobile apps, and custom software for startups and SMEs.",
+    url: "https://www.datamegathos.com/about",
+    siteName: "Data Megathos",
+    type: "website",
+  },
+};
+
 const teamMembers = [
   {
     name: "Samuel Williams",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const SITE_URL = "https://datamegathos.com";
+const SITE_URL = "https://www.datamegathos.com";
 
 export const metadata: Metadata = {
   title: "Mobile App Developers in Lagos, Nigeria | Data Megathos",
@@ -45,7 +45,7 @@ const serviceJsonLd = {
   provider: {
     "@type": "ProfessionalService",
     name: "Data Megathos",
-    url: "https://datamegathos.com/",
+    url: "https://www.datamegathos.com/",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Lagos",

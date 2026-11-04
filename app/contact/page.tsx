@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Contact & Support - Data Megathos",
   description:
     "Get in touch with Data Megathos for custom software development, web and mobile applications, data engineering, and AI automation inquiries.",
+  alternates: {
+    canonical: "https://www.datamegathos.com/contact",
+  },
 };
 
 const contactCards = [

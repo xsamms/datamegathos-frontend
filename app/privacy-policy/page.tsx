@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Data Megathos",
   description:
     "Data Megathos Engineering privacy policy and data protection protocols.",
+  alternates: {
+    canonical: "https://www.datamegathos.com/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {

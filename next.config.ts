@@ -17,6 +17,18 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // 301 redirect non-www to www (canonical domain enforcement)
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'datamegathos.com',
+          },
+        ],
+        destination: 'https://www.datamegathos.com/:path*',
+        permanent: true,
+      },
       // Old -lagos paths redirect to new clean paths
       {
         source: '/web-design-lagos',

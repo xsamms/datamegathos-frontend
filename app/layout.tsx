@@ -11,9 +11,13 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.datamegathos.com"),
   title: "Data Megathos | High-end Software Development Agency",
   description:
     "High-end software development agency specializing in mobile app and website development, WordPress development, bespoke software solutions, and intelligent AI automation.",
+  alternates: {
+    canonical: "https://www.datamegathos.com",
+  },
   verification: {
     google: "GvwMlTY33UyXTjry5K25aQpLydorjxlLWh2sD17Yfwg",
     other: {

@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Careers - Data Megathos",
   description: "Join the Data Megathos team.",
+  alternates: {
+    canonical: "https://www.datamegathos.com/careers",
+  },
 };
 
 export default function CareersPage() {

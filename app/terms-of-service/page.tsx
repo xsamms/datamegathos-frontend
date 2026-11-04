@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service - Data Megathos",
   description: "Terms of Service and User Agreements for Data Megathos.",
+  alternates: {
+    canonical: "https://www.datamegathos.com/terms-of-service",
+  },
 };
 
 export default function TermsOfServicePage() {
